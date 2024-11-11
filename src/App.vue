@@ -5,18 +5,10 @@
 
     <!-- Layout: Sidebar + Main Content -->
     <div class="layout">
-      <Sidebar @castle-selected="selectCastle" />
+      <Sidebar />
       <div class="content">
-        <!-- Если замок выбран, показываем его данные -->
-        <div v-if="selectedCastle">
-          <h2>{{ selectedCastle.name }}</h2>
-          <ul>
-            <li v-for="unit in selectedCastle.units" :key="unit">{{ unit }}</li>
-          </ul>
-        </div>
-
-        <!-- Если замок не выбран, показываем страницы через роутер -->
-        <router-view v-else />
+        <!-- Здесь рендерится выбранная страница замка -->
+        <router-view />
       </div>
     </div>
   </div>
@@ -31,25 +23,19 @@ export default {
     TopBar,
     Sidebar,
   },
-  data() {
-    return {
-      selectedCastle: null, // Для хранения выбранного замка
-    };
-  },
   methods: {
-    // Сбрасываем замок при переходе на страницы через TopBar
     handleNavigate() {
-      this.selectedCastle = null;
-    },
-    // Выбираем замок из Sidebar
-    selectCastle(castle) {
-      this.selectedCastle = castle;
+      // При переходе сбрасываем состояние (если нужно).
     },
   },
 };
 </script>
 
 <style>
+html,body{
+	padding:0;
+	marging:10;
+}
 #app {
   display: flex;
   flex-direction: column;
@@ -67,21 +53,5 @@ export default {
   padding: 20px;
   overflow-y: auto;
   background: #f5f5f5;
-}
-
-h2 {
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #ddd;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
 }
 </style>
