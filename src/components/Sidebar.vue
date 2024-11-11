@@ -21,10 +21,12 @@ export default {
         { name: 'Rampart', icon: '/src/assets/icons/rampart.png', route: '/castles/rampart' },
         { name: 'Tower', icon: '/src/assets/icons/tower.png', route: '/castles/tower' },
         { name: 'Inferno', icon: '/src/assets/icons/inferno.png', route: '/castles/inferno' },
-        { name: 'Inferno', icon: '/src/assets/icons/inferno.png', route: '/castles/inferno' },
-        { name: 'Inferno', icon: '/src/assets/icons/inferno.png', route: '/castles/inferno' },
-        { name: 'Inferno', icon: '/src/assets/icons/inferno.png', route: '/castles/inferno' },
-        { name: 'Inferno', icon: '/src/assets/icons/inferno.png', route: '/castles/inferno' },
+        { name: 'Necropolis', icon: '/src/assets/icons/necropolis.png', route: '/castles/necropolis' },
+        { name: 'Dungeon', icon: '/src/assets/icons/dungeon.png', route: '/castles/dungeon' },
+        { name: 'Stronghold', icon: '/src/assets/icons/stronghold.png', route: '/castles/stronghold' },
+        { name: 'Fortress', icon: '/src/assets/icons/fortress.png', route: '/castles/fortress' },
+        { name: 'Conflux', icon: '/src/assets/icons/conflux.png', route: '/castles/conflux' },
+        { name: 'Cove', icon: '/src/assets/icons/cove.png', route: '/castles/cove' },
         { name: 'Factory', icon: '/src/assets/icons/factory.png', route: '/castles/factory' },
         { name: 'Neutral', icon: '/src/assets/icons/neutral.png', route: '/castles/neutral' },
       ],
@@ -40,7 +42,7 @@ export default {
 
 <style>
 .sidebar {
-  width: 200px;
+  width: 100px;
   background: #222;
   color: white;
   height: 100%; /* Занимает оставшуюся высоту */
@@ -58,8 +60,9 @@ export default {
   margin-bottom: 10px;
 }
 .castle img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain; /* Корректное отображение иконок */
+  width: 55px; /* Фиксированная ширина */
+  height: 55px; /* Фиксированная высота */
+  object-fit: contain; /* Корректное отображение без обрезки */
+  border-radius: 5px; /* Радиус углов (опционально) */
 }
 </style>

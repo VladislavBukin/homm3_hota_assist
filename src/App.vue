@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <!-- TopBar -->
-    <TopBar />
+    <TopBar @navigate="handleNavigate" />
 
     <!-- Layout: Sidebar + Main Content -->
     <div class="layout">
       <Sidebar @castle-selected="selectCastle" />
       <div class="content">
-        <h2 v-if="selectedCastle">{{ selectedCastle.name }}</h2>
-        <ul v-if="selectedCastle">
-          <li v-for="unit in selectedCastle.units" :key="unit">{{ unit }}</li>
-        </ul>
-        <p v-else>Select a castle to see its units.</p>
+        <!-- Если замок выбран, показываем его данные -->
+        <div v-if="selectedCastle">
+          <h2>{{ selectedCastle.name }}</h2>
+          <ul>
+            <li v-for="unit in selectedCastle.units" :key="unit">{{ unit }}</li>
+          </ul>
+        </div>
+
+        <!-- Если замок не выбран, показываем страницы через роутер -->
+        <router-view v-else />
       </div>
     </div>
   </div>
@@ -28,12 +33,17 @@ export default {
   },
   data() {
     return {
-      selectedCastle: null, // Хранит выбранный замок
+      selectedCastle: null, // Для хранения выбранного замка
     };
   },
   methods: {
+    // Сбрасываем замок при переходе на страницы через TopBar
+    handleNavigate() {
+      this.selectedCastle = null;
+    },
+    // Выбираем замок из Sidebar
     selectCastle(castle) {
-      this.selectedCastle = castle; // Обновляем данные о замке
+      this.selectedCastle = castle;
     },
   },
 };
