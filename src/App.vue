@@ -34,7 +34,7 @@ export default {
 <style>
 html,body{
 	padding:0;
-	marging:0;
+	marging:10;
 }
 #app {
   display: flex;
