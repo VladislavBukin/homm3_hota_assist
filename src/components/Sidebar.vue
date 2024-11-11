@@ -4,7 +4,7 @@
       class="castle" 
       v-for="castle in castles" 
       :key="castle.name" 
-      @click="selectCastle(castle)"
+      @click="navigateToCastle(castle)"
     >
       <img :src="castle.icon" :alt="castle.name" />
     </div>
@@ -12,10 +12,18 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
+
 export default {
-  emits: ['castle-selected'],
-  data() {
+  setup() {
+    const router = useRouter();
+
+    const navigateToCastle = (castle) => {
+      router.push(castle.route); // Переход на страницу замка
+    };
+
     return {
+      navigateToCastle,
       castles: [
         { name: 'Castle', icon: '/src/assets/icons/castle.png', route: '/castles/castle' },
         { name: 'Rampart', icon: '/src/assets/icons/rampart.png', route: '/castles/rampart' },
@@ -31,11 +39,6 @@ export default {
         { name: 'Neutral', icon: '/src/assets/icons/neutral.png', route: '/castles/neutral' },
       ],
     };
-  },
-  methods: {
-    selectCastle(castle) {
-      this.$emit('castle-selected', castle);
-    },
   },
 };
 </script>
