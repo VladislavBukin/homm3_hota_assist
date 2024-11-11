@@ -32,6 +32,10 @@ export default {
 </script>
 
 <style>
+html,body{
+	padding:0;
+	marging:0;
+}
 #app {
   display: flex;
   flex-direction: column;
