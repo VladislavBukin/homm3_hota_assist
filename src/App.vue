@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     handleNavigate() {
-      // При переходе сбрасываем состояние (если нужно).
     },
   },
 };
@@ -33,25 +32,35 @@ export default {
 
 <style>
 html,body{
-	padding:0;
-	marging:10;
+	padding:0px;
+	margin:0px;
+  height: 1080px;
+  width: 1920px;
+  overflow: hidden; /* Отключаем прокрутку на уровне страницы */
+
 }
 #app {
   display: flex;
   flex-direction: column;
+  background: rgb(70, 43, 26);
   height: 100vh;
+  overflow: hidden; /* Отключаем выход контента за границы экрана */
+
 }
 
 .layout {
   display: flex;
   flex: 1;
-  height: calc(100vh - 60px); /* Высота TopBar */
+  height: calc(100vh - 60px);
+  overflow: hidden; /* Предотвращаем выход элементов за границы */
+ 
 }
 
 .content {
   flex: 1;
+  color: white;
   padding: 20px;
   overflow-y: auto;
-  background: #f5f5f5;
+  background: rgb(70, 43, 26);
 }
 </style>

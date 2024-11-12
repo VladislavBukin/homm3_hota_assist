@@ -46,14 +46,16 @@ export default {
 <style>
 .sidebar {
   width: 100px;
-  background: #222;
+  background: #916A49;
   color: white;
-  height: 100%; /* Занимает оставшуюся высоту */
+  height: 862px; 
   overflow-y: auto;
-  padding: 10px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Центрирование кнопок */
+  margin-left: 0px;
+  border: 2px solid #FFD700;
 }
 .castle {
   display: flex;
@@ -63,9 +65,9 @@ export default {
   margin-bottom: 10px;
 }
 .castle img {
-  width: 55px; /* Фиксированная ширина */
-  height: 55px; /* Фиксированная высота */
-  object-fit: contain; /* Корректное отображение без обрезки */
+  width: 75px; /* Фиксированная ширина */
+  height: 50px; /* Фиксированная высота */
+  object-fit: fill; 
   border-radius: 5px; /* Радиус углов (опционально) */
 }
 </style>

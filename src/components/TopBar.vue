@@ -1,8 +1,14 @@
 <template>
   <nav class="top-bar">
-    <button @click="navigate('/magic')">Магия</button>
-    <button @click="navigate('/heroes')">Герои</button>
-    <button @click="navigate('/artifacts')">Артефакты</button>
+    <button @click="navigate('/magic')">
+      <img src="/src/assets/icons/magic.png" alt="Магия" />
+    </button>
+    <button @click="navigate('/heroes')">
+      <img src="/src/assets/icons/hero.png" alt="Герои" />
+    </button>
+    <button @click="navigate('/artifacts')">
+      <img src="/src/assets/icons/magic.png" alt="Артефакты" />
+    </button>
   </nav>
 </template>
 
@@ -10,12 +16,12 @@
 import { useRouter } from 'vue-router';
 
 export default {
-  emits: ['navigate'], // Эмитим событие при переходе
+  emits: ['navigate'],
   setup(_, { emit }) {
     const router = useRouter();
     const navigate = (path) => {
-      router.push(path); // Переход на страницу
-      emit('navigate'); // Сбрасываем выбранный замок
+      router.push(path);
+      emit('navigate');
     };
     return { navigate };
   },
@@ -24,37 +30,37 @@ export default {
 
 <style>
 .top-bar {
-  background: #333; /* Цвет фона */
-  color: white; /* Цвет текста */
+  background: #916A49; /* Цвет фона */
   display: flex;
-  justify-content: space-between; /* Равноудалённые кнопки */
-  align-items: center; /* Центрирование кнопок по вертикали */
-  padding: 10px 20px; /* Отступы сверху/снизу и слева/справа */
-  height: 60px; /* Фиксированная высота */
-  width: 100%; /* Во всю ширину экрана */
+  justify-content: space-around; /* Распределение кнопок */
+  align-items: center; /* Центрирование по вертикали */
+  padding: 5px 10px; /* Отступы сверху/снизу и слева/справа */
+  height: 50px; /* Уменьшенная высота */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+  margin-left: 102px;
+  border: 2px solid #FFD700;
 }
 
 button {
-  background: #555; /* Цвет кнопки */
-  color: white; /* Цвет текста кнопки */
+  background: none; /* Убираем фоновый цвет кнопки */
   border: none; /* Убираем рамки */
-  padding: 10px 20px; /* Внутренние отступы */
-  cursor: pointer; /* Курсор при наведении */
-  flex-grow: 1; /* Равномерное распределение кнопок */
-  text-align: center; /* Текст по центру */
-  margin: 0 10px; /* Отступы между кнопками */
+  padding: 0; /* Убираем внутренние отступы */
+  cursor: pointer; /* Указываем на кликабельность */
+  width: 40px; /* Ширина кнопки */
+  height: 40px; /* Высота кнопки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button:first-child {
-  margin-left: 0; /* Убираем отступ у первой кнопки */
+button img {
+  width: 100%; /* Изображение занимает всю кнопку */
+  height: 100%; /* Изображение занимает всю кнопку */
+  object-fit: fill; /* Корректное отображение изображения */
 }
 
-button:last-child {
-  margin-right: 0; /* Убираем отступ у последней кнопки */
-}
-
-button:hover {
-  background: #777; /* Цвет кнопки при наведении */
+button:hover img {
+  transform: scale(1.1); /* Лёгкое увеличение при наведении */
+  transition: transform 0.2s ease-in-out; /* Плавный переход */
 }
 </style>
