@@ -42,21 +42,21 @@ export default {
 }
 
 button {
-  background: none; /* Убираем фоновый цвет кнопки */
-  border: none; /* Убираем рамки */
-  padding: 0; /* Убираем внутренние отступы */
-  cursor: pointer; /* Указываем на кликабельность */
-  width: 40px; /* Ширина кнопки */
-  height: 40px; /* Высота кнопки */
+  background: none; 
+  border: none; 
+  padding: 0; 
+  cursor: pointer; 
+  width: 40px; 
+  height: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 button img {
-  width: 100%; /* Изображение занимает всю кнопку */
-  height: 100%; /* Изображение занимает всю кнопку */
-  object-fit: fill; /* Корректное отображение изображения */
+  width: 100%; 
+  height: 100%; 
+  object-fit: fill; 
 }
 
 button:hover img {

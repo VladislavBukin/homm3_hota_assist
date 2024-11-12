@@ -44,7 +44,7 @@ html,body{
   flex-direction: column;
   background: rgb(70, 43, 26);
   height: 100vh;
-  overflow: hidden; /* Отключаем выход контента за границы экрана */
+  overflow: hidden; 
 
 }
 
@@ -52,7 +52,7 @@ html,body{
   display: flex;
   flex: 1;
   height: calc(100vh - 60px);
-  overflow: hidden; /* Предотвращаем выход элементов за границы */
+  overflow: hidden; 
  
 }
 
