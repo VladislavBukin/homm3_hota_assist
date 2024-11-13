@@ -8,12 +8,14 @@
       :class="{ centered: isLastRow(rowIndex) }"
     >
       <!-- Перебираем юниты внутри строки -->
-      <div
-        class="unit-block"
-        v-for="unit in row"
-        :key="unit.name"
-      >
-        <div class="unit-header">{{ unit.name }}</div>
+
+	<div
+  		v-for="(unit, index) in row"
+  		:key="unit.name"
+  		class="unit-block"
+  		:class="{'odd': index % 2 === 0, 'even': index % 2 !== 0}"
+	>
+	  <div class="unit-header">{{ unit.name }}</div>
         <div class="unit-image-placeholder">[Изображение]</div>
         <table class="unit-stats">
           <tr>
@@ -77,7 +79,7 @@ export default {
   },
   computed: {
     rows() {
-      const unitsPerRow = 4; // Количество блоков в строке
+      const unitsPerRow = 6; // Количество блоков в строке
       const rows = [];
       for (let i = 0; i < this.units.length; i += unitsPerRow) {
         rows.push(this.units.slice(i, i + unitsPerRow));
@@ -122,7 +124,23 @@ export default {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-right: 40px; /* Это базовый отступ между всеми блоками */
   font-family: "Times New Roman", serif;
+}
+
+.row .odd {
+  padding-left: 20px;   /* Увеличиваем внутренний отступ слева у первого блока в паре */
+}
+
+.row .even {
+  position: relative;
+  left: -50px;           /* Сдвигаем второй блок в паре налево, уменьшая расстояние до предыдущего */
+}
+
+/* Для последней строки можем добавить дополнительные стили, если она должна выравниваться иначе */
+.centered .unit-block {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .unit-header {
