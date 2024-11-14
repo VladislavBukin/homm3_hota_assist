@@ -34,8 +34,8 @@ export default {
 html,body{
 	padding:0px;
 	margin:0px;
-  height: 1080px;
-  width: 1920px;
+  /*height: 1080px;
+  width: 1920px;*/
   overflow: hidden; /* Отключаем прокрутку на уровне страницы */
 
 }

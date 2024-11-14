@@ -21,7 +21,6 @@ export default {
     const navigateToCastle = (castle) => {
       router.push(castle.route); // Переход на страницу замка
     };
-
     return {
       navigateToCastle,
       castles: [

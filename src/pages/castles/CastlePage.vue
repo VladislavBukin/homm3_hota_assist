@@ -109,7 +109,8 @@ export default {
 }
 
 .row.centered {
-  justify-content: center; /* Центрируем элементы последней строки */
+  /*justify-content: center; /* Центрируем элементы последней строки */
+	margin: 0 auto;
 }
 
 .unit-block {
@@ -139,8 +140,9 @@ export default {
 
 /* Для последней строки можем добавить дополнительные стили, если она должна выравниваться иначе */
 .centered .unit-block {
-  display: inline-block;
-  margin: 0 auto;
+  display: flex;
+  width: 206px;
+  /*margin: 0;*/
 }
 
 .unit-header {
