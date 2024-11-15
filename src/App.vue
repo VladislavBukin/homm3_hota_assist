@@ -1,19 +1,3 @@
-<template>
-  <div id="app">
-    <!-- TopBar -->
-    <TopBar @navigate="handleNavigate" />
-
-    <!-- Layout: Sidebar + Main Content -->
-    <div class="layout">
-      <Sidebar />
-      <div class="content">
-        <!-- Здесь рендерится выбранная страница замка -->
-        <router-view />
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
 import TopBar from './components/TopBar.vue';
 import Sidebar from './components/Sidebar.vue';
@@ -29,6 +13,22 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div id="app">
+    <!-- TopBar -->
+    <TopBar @navigate="handleNavigate" />
+
+    <!-- Layout: Sidebar + Main Content -->
+    <div class="layout">
+      <Sidebar />
+      <div class="content">
+        <!-- Здесь рендерится выбранная страница замка -->
+        <router-view />
+      </div>
+    </div>
+  </div>
+</template>
 
 <style>
 html,body{

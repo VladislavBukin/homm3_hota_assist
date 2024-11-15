@@ -1,60 +1,3 @@
-<template>
-  <div class="units-container">
-    <!-- Перебираем строки -->
-    <div
-      v-for="(row, rowIndex) in rows"
-      :key="rowIndex"
-      class="row"
-      :class="{ centered: isLastRow(rowIndex) }"
-    >
-      <!-- Перебираем юниты внутри строки -->
-
-	<div
-  		v-for="(unit, index) in row"
-  		:key="unit.name"
-  		class="unit-block"
-  		:class="{'odd': index % 2 === 0, 'even': index % 2 !== 0}"
-	>
-	  <div class="unit-header">{{ unit.name }}</div>
-        <div class="unit-image-placeholder">[Изображение]</div>
-        <table class="unit-stats">
-          <tr>
-            <td>Атака:</td>
-            <td>{{ unit.attack }}</td>
-          </tr>
-          <tr>
-            <td>Защита:</td>
-            <td>{{ unit.defense }}</td>
-          </tr>
-          <tr>
-            <td>Урон:</td>
-            <td>{{ unit.damage }}</td>
-          </tr>
-          <tr>
-            <td>Здоровье:</td>
-            <td>{{ unit.health }}</td>
-          </tr>
-          <tr>
-            <td>Скорость:</td>
-            <td>{{ unit.speed }}</td>
-          </tr>
-          <tr>
-            <td>Прирост:</td>
-            <td>{{ unit.growth }}</td>
-          </tr>
-          <tr>
-            <td>Ai value:</td>
-            <td>{{ unit.value }}</td>
-          </tr>
-        </table>
-        <div class="unit-footer">
-          {{ unit.description }}
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   data() {
@@ -77,78 +20,81 @@ export default {
       ],
     };
   },
-  computed: {
-    rows() {
-      const unitsPerRow = 6; // Количество блоков в строке
-      const rows = [];
-      for (let i = 0; i < this.units.length; i += unitsPerRow) {
-        rows.push(this.units.slice(i, i + unitsPerRow));
-      }
-      return rows;
-    },
-  },
-  methods: {
-    isLastRow(rowIndex) {
-      return rowIndex === this.rows.length - 1;
-    },
-  },
 };
 </script>
 
+<template>
+  <div class="units-grid-container">
+    <div
+      v-for="(unit, index) in units"
+      :key="unit.name"
+      class="unit-block"
+    >
+      <div class="unit-header">{{ unit.name }}</div>
+      <div class="unit-image-placeholder">[Изображение]</div>
+      <table class="unit-stats">
+        <tr>
+          <td>Атака:</td>
+          <td>{{ unit.attack }}</td>
+        </tr>
+        <tr>
+          <td>Защита:</td>
+          <td>{{ unit.defense }}</td>
+        </tr>
+        <tr>
+          <td>Урон:</td>
+          <td>{{ unit.damage }}</td>
+        </tr>
+        <tr>
+          <td>Здоровье:</td>
+          <td>{{ unit.health }}</td>
+        </tr>
+        <tr>
+          <td>Скорость:</td>
+          <td>{{ unit.speed }}</td>
+        </tr>
+        <tr>
+          <td>Прирост:</td>
+          <td>{{ unit.growth }}</td>
+        </tr>
+        <tr>
+          <td>Ai value:</td>
+          <td>{{ unit.value }}</td>
+        </tr>
+      </table>
+      <div class="unit-footer">
+        {{ unit.description }}
+      </div>
+    </div>
+  </div>
+</template>
+
 <style>
-.units-container {
-  display: flex;
-  flex-direction: column;
+.units-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.row.centered {
-  /*justify-content: center; /* Центрируем элементы последней строки */
-	margin: 0 auto;
+  padding: 20px;
 }
 
 .unit-block {
-  width: 250px;
   background: #3b2a1a;
   color: white;
-  border: 4px solid #d4af37; /* Золотая рамка */
+  border: 4px solid #d4af37;
   border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-right: 40px; /* Это базовый отступ между всеми блоками */
   font-family: "Times New Roman", serif;
-}
-
-.row .odd {
-  padding-left: 20px;   /* Увеличиваем внутренний отступ слева у первого блока в паре */
-}
-
-.row .even {
-  position: relative;
-  left: -50px;           /* Сдвигаем второй блок в паре налево, уменьшая расстояние до предыдущего */
-}
-
-/* Для последней строки можем добавить дополнительные стили, если она должна выравниваться иначе */
-.centered .unit-block {
-  display: flex;
-  width: 206px;
-  /*margin: 0;*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .unit-header {
   font-size: 18px;
   font-weight: bold;
-  color: #ffd700; /* Золотой текст */
+  color: #ffd700;
   margin-bottom: 10px;
   text-shadow: 1px 1px 2px black;
 }
@@ -163,7 +109,7 @@ export default {
   justify-content: center;
   font-size: 14px;
   margin-bottom: 10px;
-  border: 2px solid #ffd700; /* Рамка вокруг изображения */
+  border: 2px solid #ffd700;
 }
 
 .unit-stats {
@@ -180,7 +126,7 @@ export default {
 
 .unit-stats td:first-child {
   text-align: left;
-  color: #ffd700; /* Золотые подписи */
+  color: #ffd700;
 }
 
 .unit-stats td:last-child {
