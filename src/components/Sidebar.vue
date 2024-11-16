@@ -44,16 +44,16 @@ export default {
 
 <style>
 .sidebar {
-  width: 100px;
+  width: 98px;
   background: #916A49;
   color: white;
-  height: 862px; 
+  height: 100%; 
   overflow-y: auto;
-  padding: 0px;
+  padding: 2px;
   display: flex;
   flex-direction: column;
   align-items: center; /* Центрирование кнопок */
-  margin-left: 0px;
+  margin-left: 0-px;
   border: 2px solid #FFD700;
 }
 .castle {

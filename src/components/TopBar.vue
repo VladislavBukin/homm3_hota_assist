@@ -37,7 +37,7 @@ export default {
   padding: 5px 10px; /* Отступы сверху/снизу и слева/справа */
   height: 50px; /* Уменьшенная высота */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
-  margin-left: 102px;
+  margin-left: 106px;
   border: 2px solid #FFD700;
 }
 
