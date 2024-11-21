@@ -3,9 +3,9 @@ export default {
   data() {
     return {
       units: [
-        { name: "Копейщик", attack: 4, defense: 5, damage: "1-3", health: 10, speed: 4, growth: 14, value: 80, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/pikemen.jpg" },
-        { name: "Алебардщик", attack: 6, defense: 5, damage: "2-3", health: 10, speed: 5, growth: 14, value: 115, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/halberdier.jpg" },
-        { name: "Лучник", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 4, growth: 9, value: 126, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/archer.jpg" },
+        { name: "Кентавр", attack: 5, defense: 3, damage: "2-3", health: 8, speed: 6, growth: 14, value: 100, description: "", image: "/src/assets/unit_image/pikemen.jpg" },
+        { name: "Капитан Кентавров", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 8, growth: 14, value: 138, description: "", image: "/src/assets/unit_image/halberdier.jpg" },
+        { name: "Гном", attack: 6, defense: 7, damage: "2-4", health: 20, speed: 3, growth: 8, value: 138, description: "", image: "/src/assets/unit_image/archer.jpg" },
         { name: "Арбалетчик", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 6, growth: 9, value: 184, description: "Стрелок. 12 выстрелов. Двойной выстрел.", image: "/src/assets/unit_image/marksman.jpg" },
         { name: "Грифон", attack: 8, defense: 8, damage: "3-6", health: 25, speed: 6, growth: 7, value: 351, description: "Отвечает дважды.", image: "/src/assets/unit_image/griffin.jpg" },
         { name: "Королевский грифон", attack: 9, defense: 9, damage: "3-6", health: 25, speed: 9, growth: 7, value: 448, description: "Отвечает на все атаки.", image: "/src/assets/unit_image/royal_griffin.jpg" },
