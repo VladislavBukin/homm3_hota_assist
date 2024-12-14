@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-  <div class="units-grid-container">
+  <div class="units-flex-container">
     <div
       v-for="(unit, index) in units"
       :key="unit.name"
@@ -71,32 +71,15 @@ export default {
   </div>
 </template>
 
-
 <style>
-.units-grid-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Один блок по умолчанию */
+.units-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
   gap: 20px;
   padding: 20px;
 }
 
-@media (min-width: 600px) {
-  .units-grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Два блока для экранов шире 600px */
-  }
-}
-
-@media (min-width: 1000px) {
-  .units-grid-container {
-    grid-template-columns: repeat(4, 1fr); /* Четыре блока для экранов шире 1000px */
-  }
-}
-
-@media (min-width: 1400px) {
-  .units-grid-container {
-    grid-template-columns: repeat(6, 1fr); /* Шесть блоков для экранов шире 1400px */
-  }
-}
 .unit-block {
   background: #3b2a1a;
   color: white;
@@ -107,8 +90,29 @@ export default {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: "Times New Roman", serif;
+  font-family: "Terminus", serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  width: 100%; 
+}
+
+/* Медиа-запросы для адаптивности */
+@media (min-width: 600px) {
+  .unit-block {
+    width: calc(50% - 20px); /* Два блока в строке */
+  }
+}
+
+@media (min-width: 1000px) {
+  .unit-block {
+    width: calc(25% - 20px); /* Четыре блока в строке */
+  }
+}
+
+@media (min-width: 1400px) {
+  .unit-block {
+    width: calc(16.666% - 20px); /* Шесть блоков в строке */
+  }
 }
 
 .unit-header {
@@ -166,5 +170,4 @@ export default {
   border-top: 1px solid #ffd700;
   padding-top: 5px;
 }
-
 </style>

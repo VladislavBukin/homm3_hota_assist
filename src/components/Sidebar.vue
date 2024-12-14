@@ -4,7 +4,8 @@
       class="castle" 
       v-for="castle in castles" 
       :key="castle.name" 
-      @click="navigateToCastle(castle)"
+      @click="selectCastle(castle)"
+      :class="{ selected: castle.name === selectedCastle }"
     >
       <img :src="castle.icon" :alt="castle.name" />
     </div>
@@ -12,17 +13,22 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 export default {
   setup() {
     const router = useRouter();
+    const selectedCastle = ref(null); // Отслеживание выбранного замка
 
-    const navigateToCastle = (castle) => {
+    const selectCastle = (castle) => {
+      selectedCastle.value = castle.name; // Устанавливаем выбранный замок
       router.push(castle.route); // Переход на страницу замка
     };
+
     return {
-      navigateToCastle,
+      selectCastle,
+      selectedCastle,
       castles: [
         { name: 'Castle', icon: '/src/assets/icons/castle.png', route: '/castles/castle' },
         { name: 'Rampart', icon: '/src/assets/icons/rampart.png', route: '/castles/rampart' },
@@ -47,26 +53,36 @@ export default {
   width: 98px;
   background: #916A49;
   color: white;
-  height: 100%; 
+  height: 100%;
   overflow-y: auto;
   padding: 2px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центрирование кнопок */
-  margin-left: 0-px;
+  align-items: center;
+  margin-left: 0px;
   border: 2px solid #FFD700;
+  justify-content: space-between;
+  
 }
+
 .castle {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
+
 .castle img {
   width: 75px; /* Фиксированная ширина */
-  height: 50px; /* Фиксированная высота */
-  object-fit: fill; 
+  height: 60px; /* Фиксированная высота */
+  object-fit: fill;
   border-radius: 5px; /* Радиус углов (опционально) */
+}
+
+.castle.selected {
+  border: 2px solid #FFD700; /* Золотая рамка */
+  border-radius: 5px; /* Совпадение радиуса с иконкой */
 }
 </style>

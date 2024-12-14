@@ -36,7 +36,7 @@ html,body{
 	margin:0px;
   /*height: 1080px;
   width: 1920px;*/
-  overflow: hidden; /* Отключаем прокрутку на уровне страницы */
+  /*overflow: hidden; /* Отключаем прокрутку на уровне страницы */
 
 }
 #app {
