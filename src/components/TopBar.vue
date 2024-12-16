@@ -1,53 +1,54 @@
-<template>
-  <nav class="top-bar">
-    <button @click="navigate('/magic')">
-      <img src="/src/assets/icons/magic.png" alt="Магия" />
-    </button>
-    <button @click="navigate('/heroes')">
-      <img src="/src/assets/icons/hero.png" alt="Герои" />
-    </button>
-    <button @click="navigate('/artifacts')">
-      <img src="/src/assets/icons/magic.png" alt="Артефакты" />
-    </button>
-  </nav>
-</template>
-
 <script>
 import { useRouter } from 'vue-router';
 
 export default {
-  emits: ['navigate'],
-  setup(_, { emit }) {
+  setup() {
     const router = useRouter();
+
+    // Массив кнопок с иконками и маршрутами
+    const buttons = [
+      { src: '/src/assets/icons/magic.png', alt: 'Магия', route: '/magic' },
+      { src: '/src/assets/icons/hero.png', alt: 'Герои', route: '/heroes' },
+      { src: '/src/assets/icons/magic.png', alt: 'Артефакты', route: '/artifacts' },
+    ];
+
     const navigate = (path) => {
-      router.push(path);
-      emit('navigate');
+      router.push(path); // Переход на указанный маршрут
     };
-    return { navigate };
+
+    return { buttons, navigate };
   },
 };
 </script>
 
-<style>
+<template>
+  <nav class="top-bar">
+    <button v-for="(icon, index) in buttons" :key="index" @click="navigate(icon.route)">
+      <img :src="icon.src" :alt="icon.alt" />
+    </button>
+  </nav>
+</template>
+
+<style scoped>
 .top-bar {
   background: #916A49; /* Цвет фона */
   display: flex;
   justify-content: space-around; /* Распределение кнопок */
   align-items: center; /* Центрирование по вертикали */
   padding: 5px 10px; /* Отступы сверху/снизу и слева/справа */
-  height: 50px; /* Уменьшенная высота */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
-  margin-left: 106px;
-  border: 2px solid #FFD700;
+  height: 50px; /* Высота панели */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-left: 106px; /* Отступ слева */
+  border: 2px solid #FFD700; /* Рамка */
 }
 
 button {
-  background: none; 
-  border: none; 
-  padding: 0; 
-  cursor: pointer; 
-  width: 40px; 
-  height: 40px; 
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,11 +57,11 @@ button {
 button img {
   width: 100%; 
   height: 100%; 
-  object-fit: fill; 
+  object-fit: fill;
 }
 
 button:hover img {
-  transform: scale(1.1); /* Лёгкое увеличение при наведении */
+  transform: scale(1.1); 
   transition: transform 0.2s ease-in-out; /* Плавный переход */
 }
 </style>
