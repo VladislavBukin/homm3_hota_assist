@@ -1,7 +1,18 @@
 <script>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-
+import castleImg from '/src/assets/icons/castle.png/';
+import rampartImg from '/src/assets/icons/rampart.png/';
+import towerImg from '/src/assets/icons/tower.png/';
+import infernoImg from '/src/assets/icons/inferno.png/';
+import necropolisImg from '/src/assets/icons/necropolis.png/';
+import dungeonImg from '/src/assets/icons/dungeon.png/';
+import strongholdImg from '/src/assets/icons/stronghold.png/';
+import fortressImg from '/src/assets/icons/fortress.png/';
+import confluxImg from '/src/assets/icons/conflux.png/';
+import coveImg from '/src/assets/icons/cove.png/';
+import factoryImg from '/src/assets/icons/factory.png/';
+import neutralImg from '/src/assets/icons/neutral.png/';
 export default {
   setup() {
     const router = useRouter();
@@ -15,18 +26,18 @@ export default {
 
     // Список замков с их иконками и маршрутами
     const castles = [
-      { name: 'Castle', icon: '/src/assets/icons/castle.png', route: '/castles/castle' },
-      { name: 'Rampart', icon: '/src/assets/icons/rampart.png', route: '/castles/rampart' },
-      { name: 'Tower', icon: '/src/assets/icons/tower.png', route: '/castles/tower' },
-      { name: 'Inferno', icon: '/src/assets/icons/inferno.png', route: '/castles/inferno' },
-      { name: 'Necropolis', icon: '/src/assets/icons/necropolis.png', route: '/castles/necropolis' },
-      { name: 'Dungeon', icon: '/src/assets/icons/dungeon.png', route: '/castles/dungeon' },
-      { name: 'Stronghold', icon: '/src/assets/icons/stronghold.png', route: '/castles/stronghold' },
-      { name: 'Fortress', icon: '/src/assets/icons/fortress.png', route: '/castles/fortress' },
-      { name: 'Conflux', icon: '/src/assets/icons/conflux.png', route: '/castles/conflux' },
-      { name: 'Cove', icon: '/src/assets/icons/cove.png', route: '/castles/cove' },
-      { name: 'Factory', icon: '/src/assets/icons/factory.png', route: '/castles/factory' },
-      { name: 'Neutral', icon: '/src/assets/icons/neutral.png', route: '/castles/neutral' },
+      { name: 'Castle', icon: castleImg, route: '/castles/castle' },
+      { name: 'Rampart', icon: rampartImg, route: '/castles/rampart' },
+      { name: 'Tower', icon: towerImg, route: '/castles/tower' },
+      { name: 'Inferno', icon: infernoImg, route: '/castles/inferno' },
+      { name: 'Necropolis', icon: necropolisImg, route: '/castles/necropolis' },
+      { name: 'Dungeon', icon: dungeonImg, route: '/castles/dungeon' },
+      { name: 'Stronghold', icon: strongholdImg, route: '/castles/stronghold' },
+      { name: 'Fortress', icon: fortressImg, route: '/castles/fortress' },
+      { name: 'Conflux', icon: confluxImg, route: '/castles/conflux' },
+      { name: 'Cove', icon: coveImg, route: '/castles/cove' },
+      { name: 'Factory', icon: factoryImg, route: '/castles/factory' },
+      { name: 'Neutral', icon: neutralImg, route: '/castles/neutral' },
     ];
 
     return {
