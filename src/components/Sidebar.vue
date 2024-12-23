@@ -18,7 +18,6 @@ export default {
     const router = useRouter();
     const selectedCastle = ref(null); // Отслеживание выбранного замка
 
-    // Обработчик выбора замка
     const selectCastle = (castle) => {
       selectedCastle.value = castle.name; // Устанавливаем выбранный замок
       router.push(castle.route); // Переход на страницу замка
@@ -26,18 +25,18 @@ export default {
 
     // Список замков с их иконками и маршрутами
     const castles = [
-      { name: 'Castle', icon: castleImg, route: '/castles/castle' },
-      { name: 'Rampart', icon: rampartImg, route: '/castles/rampart' },
-      { name: 'Tower', icon: towerImg, route: '/castles/tower' },
-      { name: 'Inferno', icon: infernoImg, route: '/castles/inferno' },
+      { name: 'Castle',     icon: castleImg,     route: '/castles/castle' },
+      { name: 'Rampart',    icon: rampartImg,    route: '/castles/rampart' },
+      { name: 'Tower',      icon: towerImg,      route: '/castles/tower' },
+      { name: 'Inferno',    icon: infernoImg,    route: '/castles/inferno' },
       { name: 'Necropolis', icon: necropolisImg, route: '/castles/necropolis' },
-      { name: 'Dungeon', icon: dungeonImg, route: '/castles/dungeon' },
+      { name: 'Dungeon',    icon: dungeonImg,    route: '/castles/dungeon' },
       { name: 'Stronghold', icon: strongholdImg, route: '/castles/stronghold' },
-      { name: 'Fortress', icon: fortressImg, route: '/castles/fortress' },
-      { name: 'Conflux', icon: confluxImg, route: '/castles/conflux' },
-      { name: 'Cove', icon: coveImg, route: '/castles/cove' },
-      { name: 'Factory', icon: factoryImg, route: '/castles/factory' },
-      { name: 'Neutral', icon: neutralImg, route: '/castles/neutral' },
+      { name: 'Fortress',   icon: fortressImg,   route: '/castles/fortress' },
+      { name: 'Conflux',    icon: confluxImg,    route: '/castles/conflux' },
+      { name: 'Cove',       icon: coveImg,       route: '/castles/cove' },
+      { name: 'Factory',    icon: factoryImg,    route: '/castles/factory' },
+      { name: 'Neutral',    icon: neutralImg,    route: '/castles/neutral' },
     ];
 
     return {
@@ -68,7 +67,7 @@ export default {
   width: 98px;
   background: #916A49;
   color: white;
-  height: 100%;
+  height: 100% -2px;
   overflow-y: auto;
   padding: 2px;
   display: flex;
@@ -86,6 +85,11 @@ export default {
   margin: 5px 0; /* Упрощение маргинов */
 }
 
+.castle:hover {
+  transform: scale(1.1); 
+  transition: transform 0.2s ease-in-out; /* Плавный переход */
+}
+
 .castle img {
   width: 75px; /* Фиксированная ширина */
   height: 60px; /* Фиксированная высота */
@@ -94,7 +98,12 @@ export default {
 }
 
 .castle.selected {
-  border: 2px solid #FFD700; /* Золотая рамка для выбранного элемента */
-  border-radius: 5px; /* Совпадение радиуса с иконкой */
+  border: 2px solid #FFD700; 
+  border-radius: 5px; 
+}
+.castle.selected:hover {
+  transform: scale(1.1); 
+  transition: transform 0.2s ease-in-out; /* Плавный переход */
+  border: 2px solid #FFD700; 
 }
 </style>
