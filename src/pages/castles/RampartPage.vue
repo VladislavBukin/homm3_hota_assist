@@ -1,22 +1,36 @@
 <script>
+import centaur          from '/src/assets/unit_image/rampart/centaur.jpg';
+import centaurCaptain   from '/src/assets/unit_image/rampart/centaur_captain.jpg';
+import dwarf            from '/src/assets/unit_image/rampart/dwarf.jpg';
+import battleDwarf      from '/src/assets/unit_image/rampart/battle_dwarf.jpg';
+import woodElf          from '/src/assets/unit_image/rampart/wood_elf.jpg';
+import grandElf         from '/src/assets/unit_image/rampart/grand_elf.jpg';
+import pegasus          from '/src/assets/unit_image/rampart/pegasus.jpg';
+import silverPegasus    from '/src/assets/unit_image/rampart/silver_pegasus.jpg';
+import drendroidGuard   from '/src/assets/unit_image/rampart/drendroid_guard.jpg';
+import drendroidSoldier from '/src/assets/unit_image/rampart/drendroid_soldier.jpg';
+import unicorn          from '/src/assets/unit_image/rampart/unicorn.jpg';
+import warUnicorn       from '/src/assets/unit_image/rampart/war_unicorn.jpg';
+import greenDragon      from '/src/assets/unit_image/rampart/green_dragon.jpg';
+import goldenDragon     from '/src/assets/unit_image/rampart/golden_dragon.jpg';
 export default {
   data() {
     return {
       units: [
-        { name: "Кентавр", attack: 5, defense: 3, damage: "2-3", health: 8, speed: 6, growth: 14, value: 100, description: "Большое существо", image: '/src/assets/unit_image/rampart/centaur.jpg' },
-        { name: "Кентавр Капитан", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 8, growth: 14, value: 138, description: "Большое существо", image: '/src/assets/unit_image/rampart/centaur_captain.jpg' },
-        { name: "Гном", attack: 6, defense: 7, damage: "2-4", health: 20, speed: 3, growth: 8, value: 138, description: "Сопротивляемость магии 20%", image: '/src/assets/unit_image/rampart/dwarf.jpg' },
-        { name: "Боевой Гном", attack: 7, defense: 7, damage: "2-4", health: 20, speed: 5, growth: 8, value: 209, description: "Сопротивляемость магии 40%", image: '/src/assets/unit_image/rampart/battle_dwarf.jpg' },
-        { name: "Эльф", attack: 9, defense: 5, damage: "3-5", health: 15, speed: 6, growth: 7, value: 234, description: "Стреляет, 24 выстрела", image: '/src/assets/unit_image/rampart/wood_elf.jpg' },
-        { name: "Великий Эльф", attack: 9, defense: 5, damage: "3-5", health: 15, speed: 7, growth: 7, value: 331, description: "Стреляет, 24 выстрела. Двойной выстрел", image: '/src/assets/unit_image/rampart/grand_elf.jpg' },
-        { name: "Пегас", attack: 9, defense: 8, damage: "5-9", health: 30, speed: 8, growth: 5, value: 518, description: "Большое существо, летающее существо, Подавитель магии", image: '/src/assets/unit_image/rampart/pegasus.jpg' },
-        { name: "Серебряный пегас", attack: 9, defense: 10, damage: "5-9", health: 30, speed: 12, growth: 5, value: 532, description: "Большое существо, летающее существо, Подавитель магии", image: '/src/assets/unit_image/rampart/silver_pegasus.jpg' },
-        { name: "Дендроид-страж", attack: 9, defense: 12, damage: "10-14", health: 55, speed: 3, growth: 3, value: 517, description: "Опутывание", image: '/src/assets/unit_image/rampart/drendroid_guard.jpg' },
-        { name: "Дендроид-солдат", attack: 9, defense: 12, damage: "10-14", health: 65, speed: 4, growth: 3, value: 803, description: "Опутывание", image: '/src/assets/unit_image/rampart/drendroid_soldier.jpg' },
-        { name: "Единорог", attack: 15, defense: 14, damage: "18-22", health: 90, speed: 7, growth: 2, value: 1806, description: "Большое существо, Ослепляющий удар, Аура сопротивления магии", image: '/src/assets/unit_image/rampart/unicorn.jpg' },
-        { name: "Боевой единорог", attack: 15, defense: 14, damage: "18-22", health: 110, speed: 9, growth: 2, value: 2030, description: "Большое существо, Ослепляющий удар, Аура сопротивления магии", image: '/src/assets/unit_image/rampart/war_unicorn.jpg' },
-        { name: "Зелёный дракон", attack: 18, defense: 18, damage: "40-50", health: 180, speed: 10, growth: 1, value: 4872, description: "Большое существо, летающее существо, дыхание дракона, невоспримчивость к магии 1-3 уровня", image: '/src/assets/unit_image/rampart/green_dragon.jpg' },
-        { name: "Золотой дракон", attack: 27, defense: 27, damage: "40-50", health: 250, speed: 16, growth: 1, value: 8613, description: "Большое существо, летающее существо, дыхание дракона, невоспримчивость к магии 1-4 уровня", image: '/src/assets/unit_image/rampart/golden_dragon.jpg' },
+        { name: "Кентавр", attack: 5, defense: 3, damage: "2-3", health: 8, speed: 6, growth: 14, value: 100, description: "Большое существо", image: centaur },
+        { name: "Кентавр Капитан", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 8, growth: 14, value: 138, description: "Большое существо", image: centaurCaptain },
+        { name: "Гном", attack: 6, defense: 7, damage: "2-4", health: 20, speed: 3, growth: 8, value: 138, description: "Сопротивляемость магии 20%", image: dwarf },
+        { name: "Боевой Гном", attack: 7, defense: 7, damage: "2-4", health: 20, speed: 5, growth: 8, value: 209, description: "Сопротивляемость магии 40%", image: battleDwarf },
+        { name: "Эльф", attack: 9, defense: 5, damage: "3-5", health: 15, speed: 6, growth: 7, value: 234, description: "Стреляет, 24 выстрела", image: woodElf },
+        { name: "Великий Эльф", attack: 9, defense: 5, damage: "3-5", health: 15, speed: 7, growth: 7, value: 331, description: "Стреляет, 24 выстрела. Двойной выстрел", image: grandElf },
+        { name: "Пегас", attack: 9, defense: 8, damage: "5-9", health: 30, speed: 8, growth: 5, value: 518, description: "Большое существо, летающее существо, Подавитель магии", image: pegasus },
+        { name: "Серебряный пегас", attack: 9, defense: 10, damage: "5-9", health: 30, speed: 12, growth: 5, value: 532, description: "Большое существо, летающее существо, Подавитель магии", image: silverPegasus },
+        { name: "Дендроид-страж", attack: 9, defense: 12, damage: "10-14", health: 55, speed: 3, growth: 3, value: 517, description: "Опутывание", image: drendroidGuard },
+        { name: "Дендроид-солдат", attack: 9, defense: 12, damage: "10-14", health: 65, speed: 4, growth: 3, value: 803, description: "Опутывание", image: drendroidSoldier },
+        { name: "Единорог", attack: 15, defense: 14, damage: "18-22", health: 90, speed: 7, growth: 2, value: 1806, description: "Большое существо, Ослепляющий удар, Аура сопротивления магии", image: unicorn },
+        { name: "Боевой единорог", attack: 15, defense: 14, damage: "18-22", health: 110, speed: 9, growth: 2, value: 2030, description: "Большое существо, Ослепляющий удар, Аура сопротивления магии", image: warUnicorn },
+        { name: "Зелёный дракон", attack: 18, defense: 18, damage: "40-50", health: 180, speed: 10, growth: 1, value: 4872, description: "Большое существо, летающее существо, дыхание дракона, невоспримчивость к магии 1-3 уровня", image: greenDragon },
+        { name: "Золотой дракон", attack: 27, defense: 27, damage: "40-50", health: 250, speed: 16, growth: 1, value: 8613, description: "Большое существо, летающее существо, дыхание дракона, невоспримчивость к магии 1-4 уровня", image: goldenDragon },
       ],
     };
   },

@@ -1,18 +1,18 @@
 <script>
-import gremlinImage from "/src/assets/unit_image/tower/gremlin.jpg";
-import masterGremlinImage from "/src/assets/unit_image/tower/master_gremlin.jpg";
-import stoneGargoyleImage from "/src/assets/unit_image/tower/stone_gargoyle.jpg";
-import obsidianGargoyleImage from "/src/assets/unit_image/tower/obsidian_gargoyle.jpg";
-import stoneGolemImage from "/src/assets/unit_image/tower/stone_golem.jpg";
-import ironGolemImage from "/src/assets/unit_image/tower/iron_golem.jpg";
-import mageImage from "/src/assets/unit_image/tower/mage.jpg";
-import archMageImage from "/src/assets/unit_image/tower/arch_mage.jpg";
-import genieImage from "/src/assets/unit_image/tower/genie.jpg";
-import masterGenieImage from "/src/assets/unit_image/tower/master_genie.jpg";
-import nagaImage from "/src/assets/unit_image/tower/naga.jpg";
-import nagaQueenImage from "/src/assets/unit_image/tower/naga_queen.jpg";
-import giantImage from "/src/assets/unit_image/tower/Giant.jpg";
-import titanImage from "/src/assets/unit_image/tower/Titan.jpg";
+import gremlinImage           from "/src/assets/unit_image/tower/gremlin.jpg";
+import masterGremlinImage     from "/src/assets/unit_image/tower/master_gremlin.jpg";
+import stoneGargoyleImage     from "/src/assets/unit_image/tower/stone_gargoyle.jpg";
+import obsidianGargoyleImage  from "/src/assets/unit_image/tower/obsidian_gargoyle.jpg";
+import stoneGolemImage        from "/src/assets/unit_image/tower/stone_golem.jpg";
+import ironGolemImage         from "/src/assets/unit_image/tower/iron_golem.jpg";
+import mageImage              from "/src/assets/unit_image/tower/mage.jpg";
+import archMageImage          from "/src/assets/unit_image/tower/arch_mage.jpg";
+import genieImage             from "/src/assets/unit_image/tower/genie.jpg";
+import masterGenieImage       from "/src/assets/unit_image/tower/master_genie.jpg";
+import nagaImage              from "/src/assets/unit_image/tower/naga.jpg";
+import nagaQueenImage         from "/src/assets/unit_image/tower/naga_queen.jpg";
+import giantImage             from "/src/assets/unit_image/tower/Giant.jpg";
+import titanImage             from "/src/assets/unit_image/tower/Titan.jpg";
 
 export default {
   data() {
