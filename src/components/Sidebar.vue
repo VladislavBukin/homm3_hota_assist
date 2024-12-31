@@ -26,18 +26,18 @@ export default {
 
     // Список замков с их иконками и маршрутами
     const castles = [
-      { name: 'Castle', icon: castleImg, route: '/castles/castle' },
-      { name: 'Rampart', icon: rampartImg, route: '/castles/rampart' },
-      { name: 'Tower', icon: towerImg, route: '/castles/tower' },
-      { name: 'Inferno', icon: infernoImg, route: '/castles/inferno' },
-      { name: 'Necropolis', icon: necropolisImg, route: '/castles/necropolis' },
-      { name: 'Dungeon', icon: dungeonImg, route: '/castles/dungeon' },
-      { name: 'Stronghold', icon: strongholdImg, route: '/castles/stronghold' },
-      { name: 'Fortress', icon: fortressImg, route: '/castles/fortress' },
-      { name: 'Conflux', icon: confluxImg, route: '/castles/conflux' },
-      { name: 'Cove', icon: coveImg, route: '/castles/cove' },
-      { name: 'Factory', icon: factoryImg, route: '/castles/factory' },
-      { name: 'Neutral', icon: neutralImg, route: '/castles/neutral' },
+      { name: 'Castle',     icon: castleImg,        route: '/homm3_hota_assist/castles/castle' },
+      { name: 'Rampart',    icon: rampartImg,       route: '/homm3_hota_assist/castles/rampart' },
+      { name: 'Tower',      icon: towerImg,         route: '/homm3_hota_assist/castles/tower' },
+      { name: 'Inferno',    icon: infernoImg,       route: '/homm3_hota_assist/castles/inferno' },
+      { name: 'Necropolis', icon: necropolisImg,    route: '/homm3_hota_assist/castles/necropolis' },
+      { name: 'Dungeon',    icon: dungeonImg,       route: '/homm3_hota_assist/castles/dungeon' },
+      { name: 'Stronghold', icon: strongholdImg,    route: '/homm3_hota_assist/castles/stronghold' },
+      { name: 'Fortress',   icon: fortressImg,      route: '/homm3_hota_assist/castles/fortress' },
+      { name: 'Conflux',    icon: confluxImg,       route: '/homm3_hota_assist/castles/conflux' },
+      { name: 'Cove',       icon: coveImg,          route: '/homm3_hota_assist/castles/cove' },
+      { name: 'Factory',    icon: factoryImg,       route: '/homm3_hota_assist/castles/factory' },
+      { name: 'Neutral',    icon: neutralImg,       route: '/homm3_hota_assist/castles/neutral' },
     ];
 
     return {
@@ -68,7 +68,7 @@ export default {
   width: 98px;
   background: #916A49;
   color: white;
-  height: 100%;
+  height: 100%-2px;
   overflow-y: auto;
   padding: 2px;
   display: flex;
@@ -86,6 +86,11 @@ export default {
   margin: 5px 0; /* Упрощение маргинов */
 }
 
+.castle:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
 .castle img {
   width: 75px; /* Фиксированная ширина */
   height: 60px; /* Фиксированная высота */
@@ -97,4 +102,11 @@ export default {
   border: 2px solid #FFD700; /* Золотая рамка для выбранного элемента */
   border-radius: 5px; /* Совпадение радиуса с иконкой */
 }
+
+.castle.selected:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+  border: 2px solid #FFD700;
+}
+
 </style>

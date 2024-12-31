@@ -18,20 +18,20 @@ export default {
   data() {
     return {
       units: [
-        { name: "Копейщик", attack: 4, defense: 5, damage: "1-3", health: 10, speed: 4, growth: 14, value: 80, description: "Иммунитет к кавалерийскому бонусу.", image: pikemen },
-        { name: "Алебардщик", attack: 6, defense: 5, damage: "2-3", health: 10, speed: 5, growth: 14, value: 115, description: "Иммунитет к кавалерийскому бонусу.", image: halberdier },
-        { name: "Лучник", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 4, growth: 9, value: 126, description: "Стрелок. 12 выстрелов.", image: archer },
-        { name: "Арбалетчик", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 6, growth: 9, value: 184, description: "Стрелок. 12 выстрелов. Двойной выстрел.", image: marksman },
-        { name: "Грифон", attack: 8, defense: 8, damage: "3-6", health: 25, speed: 6, growth: 7, value: 351, description: "Отвечает дважды.", image: griffin },
-        { name: "Королевский грифон", attack: 9, defense: 9, damage: "3-6", health: 25, speed: 9, growth: 7, value: 448, description: "Отвечает на все атаки.", image: royalGriffin },
-        { name: "Мечник", attack: 10, defense: 12, damage: "6-9", health: 35, speed: 5, growth: 4, value: 445, description: "", image: swordsman },
-        { name: "Крестоносец", attack: 12, defense: 12, damage: "7-10", health: 35, speed: 6, growth: 4, value: 558, description: "Двойной удар.", image: crusader },
-        { name: "Монах", attack: 12, defense: 7, damage: "10-12", health: 30, speed: 5, growth: 3, value: 582, description: "Стрелок. 12 выстрелов.", image: monk },
-        { name: "Фанатик", attack: 12, defense: 10, damage: "10-12", health: 30, speed: 7, growth: 3, value: 750, description: "Стрелок. 12 выстрелов. Нет штрафа в ближнем бою.", image: zealot },
-        { name: "Кавалерист", attack: 15, defense: 15, damage: "15-25", health: 100, speed: 7, growth: 2, value: 1946, description: "Кавалерийский бонус.", image: cavalier },
-        { name: "Чемпион", attack: 16, defense: 16, damage: "20-25", health: 100, speed: 9, growth: 2, value: 2100, description: "Кавалерийский бонус.", image: champion },
-        { name: "Ангел", attack: 20, defense: 20, damage: "50", health: 200, speed: 12, growth: 1, value: 5019, description: "Повышает мораль. Ненавидит дьяволов.", image: angel },
-        { name: "Архангел", attack: 30, defense: 30, damage: "50", health: 250, speed: 18, growth: 1, value: 8776, description: "Повышает мораль. Ненавидит дьяволов. Воскрешает.", image: archangel },
+        { name: "Копейщик",           attack: 4,  defense: 5,  damage: "1-3",   health: 10,  speed: 4,  growth: 14, price: 60, value: 80,   description: "Иммунитет к кавалерийскому бонусу.",               image: pikemen },
+        { name: "Алебардщик",         attack: 6,  defense: 5,  damage: "2-3",   health: 10,  speed: 5,  growth: 14, price: 75, value: 115,  description: "Иммунитет к кавалерийскому бонусу.",               image: halberdier },
+        { name: "Лучник",             attack: 6,  defense: 3,  damage: "2-3",   health: 10,  speed: 4,  growth: 9,  price: 100, value: 126,  description: "Стрелок. 12 выстрелов.",                           image: archer },
+        { name: "Арбалетчик",         attack: 6,  defense: 3,  damage: "2-3",   health: 10,  speed: 6,  growth: 9,  price: 150, value: 184,  description: "Стрелок. 12 выстрелов. Двойной выстрел.",          image: marksman },
+        { name: "Грифон",             attack: 8,  defense: 8,  damage: "3-6",   health: 25,  speed: 6,  growth: 7,  price: 200, value: 351,  description: "Отвечает дважды.",                                 image: griffin },
+        { name: "Королевский грифон", attack: 9,  defense: 9,  damage: "3-6",   health: 25,  speed: 9,  growth: 7,  price: 240, value: 448,  description: "Отвечает на все атаки.",                           image: royalGriffin },
+        { name: "Мечник",             attack: 10, defense: 12, damage: "6-9",   health: 35,  speed: 5,  growth: 4,  price: 300, value: 445,  description: "",                                                 image: swordsman },
+        { name: "Крестоносец",        attack: 12, defense: 12, damage: "7-10",  health: 35,  speed: 6,  growth: 4,  price: 400, value: 558,  description: "Двойной удар.",                                    image: crusader },
+        { name: "Монах",              attack: 12, defense: 7,  damage: "10-12", health: 30,  speed: 5,  growth: 3,  price: 400, value: 582,  description: "Стрелок. 12 выстрелов.",                           image: monk },
+        { name: "Фанатик",            attack: 12, defense: 10, damage: "10-12", health: 30,  speed: 7,  growth: 3,  price: 450, value: 750,  description: "Стрелок. 12 выстрелов. Нет штрафа в ближнем бою.", image: zealot },
+        { name: "Кавалерист",         attack: 15, defense: 15, damage: "15-25", health: 100, speed: 7,  growth: 2,  price: 1000, value: 1946, description: "Кавалерийский бонус.",                             image: cavalier },
+        { name: "Чемпион",            attack: 16, defense: 16, damage: "20-25", health: 100, speed: 9,  growth: 2,  price: 1200, value: 2100, description: "Кавалерийский бонус.",                             image: champion },
+        { name: "Ангел",              attack: 20, defense: 20, damage: "50",    health: 200, speed: 12, growth: 1,  price: 3000, value: 5019, description: "Повышает мораль. Ненавидит дьяволов.",             image: angel },
+        { name: "Архангел",           attack: 30, defense: 30, damage: "50",    health: 250, speed: 18, growth: 1,  price: 5000 , value: 8776, description: "Повышает мораль. Ненавидит дьяволов. Воскрешает.", image: archangel },
       ],
     };
   },
@@ -73,6 +73,10 @@ export default {
         <tr>
           <td>Прирост:</td>
           <td>{{ unit.growth }}</td>
+        </tr>
+        <tr>
+          <td>Стоимость</td>
+          <td>{{ unit.price }}</td>
         </tr>
         <tr>
           <td>Ai value:</td>

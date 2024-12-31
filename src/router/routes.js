@@ -23,18 +23,18 @@ const routes = [
   { path: '/heroes', component: HeroesPage },
   { path: '/artifacts', component: ArtifactsPage },
   // Маршруты замков
-  { path: '/castles/castle', component: CastlePage },
-  { path: '/castles/rampart', component: RampartPage },
-  { path: '/castles/tower', component: TowerPage },
-  { path: '/castles/inferno', component: InfernoPage },
-  { path: '/castles/necropolis', component: NecropolisPage },
-  { path: '/castles/dungeon', component: DungeonPage },
-  { path: '/castles/stronghold', component: StrongholdPage },
-  { path: '/castles/fortress', component: FortressPage },
-  { path: '/castles/conflux', component: ConfluxPage },
-  { path: '/castles/cove', component: CovePage },
-  { path: '/castles/factory', component: FactoryPage }, // Маршрут Factory
-  { path: '/castles/neutral', component: NeutralPage }, // Маршрут Neutral
+  { path: '/homm3_hota_assist/castles/castle', component: CastlePage },
+  { path: '/homm3_hota_assist/castles/rampart', component: RampartPage },
+  { path: '/homm3_hota_assist/castles/tower', component: TowerPage },
+  { path: '/homm3_hota_assist/castles/inferno', component: InfernoPage },
+  { path: '/homm3_hota_assist/castles/necropolis', component: NecropolisPage },
+  { path: '/homm3_hota_assist/castles/dungeon', component: DungeonPage },
+  { path: '/homm3_hota_assist/castles/stronghold', component: StrongholdPage },
+  { path: '/homm3_hota_assist/castles/fortress', component: FortressPage },
+  { path: '/homm3_hota_assist/castles/conflux', component: ConfluxPage },
+  { path: '/homm3_hota_assist/castles/cove', component: CovePage },
+  { path: '/homm3_hota_assist/castles/factory', component: FactoryPage }, // Маршрут Factory
+  { path: '/homm3_hota_assist/castles/neutral', component: NeutralPage }, // Маршрут Neutral
 ];
 
 const router = createRouter({
