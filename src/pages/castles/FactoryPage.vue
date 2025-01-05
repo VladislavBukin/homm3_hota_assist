@@ -7,13 +7,13 @@ import engineer            from '/src/assets/unit_image/factory/engineer.webp';
 import armadillo           from '/src/assets/unit_image/factory/armadillo.webp';
 import bellwetherArmadillo from '/src/assets/unit_image/factory/bellwetherarmadillo.webp';
 import automaton           from '/src/assets/unit_image/factory/automaton.webp';
-import sentinelAutomaton   from '/src/assets/unit_image/factory/sentinelAutomaton.webp';
+import sentinelAutomaton   from '/src/assets/unit_image/factory/sentinelautomaton.webp';
 import sandworm            from '/src/assets/unit_image/factory/sandworm.webp';
 import olgoiKhorkhoi       from '/src/assets/unit_image/factory/olgoikhorkhoi.webp';
 import gunslinger          from '/src/assets/unit_image/factory/gunslinger.webp';
 import bountyHunter        from '/src/assets/unit_image/factory/bountyhunter.webp';
 import couatl              from '/src/assets/unit_image/factory/couatl.webp';
-import crimsonCouatl       from '/src/assets/unit_image/factory/crimsonCouatl.webp';
+import crimsonCouatl       from '/src/assets/unit_image/factory/crimsoncouatl.webp';
 import dreadnought         from '/src/assets/unit_image/factory/dreadnought.webp';
 import juggernaut          from '/src/assets/unit_image/factory/juggernaut.webp';
 
