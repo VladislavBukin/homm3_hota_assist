@@ -3,7 +3,7 @@ import { resourceIcons } from '/src/assets/icons/resourceIcons.js';
 import Peasant           from '/src/assets/unit_image/neutral/peasant.webp';
 import Rogue             from '/src/assets/unit_image/neutral/rogue.webp';
 import Boar              from '/src/assets/unit_image/neutral/boar.webp';
-import Leprechaun        from '/src/assets/unit_image/neutral/Leprechaun.webp';
+import Leprechaun        from '/src/assets/unit_image/neutral/leprechaun.webp';
 import Mummy             from '/src/assets/unit_image/neutral/mummy.webp';
 import Nomad             from '/src/assets/unit_image/neutral/nomad.webp';
 import Sharpshooter      from '/src/assets/unit_image/neutral/sharpshooter.webp';
@@ -17,7 +17,7 @@ import Faeriedragon      from '/src/assets/unit_image/neutral/faeriedragon.webp'
 import Rustdragon        from '/src/assets/unit_image/neutral/rustdragon.webp';
 import Crystaldragon     from '/src/assets/unit_image/neutral/crystaldragon.webp';
 import Azuredragon       from '/src/assets/unit_image/neutral/azuredragon.webp';
-import Steelgolem       from '/src/assets/unit_image/neutral/Steelgolem.webp';
+import Steelgolem       from '/src/assets/unit_image/neutral/steelgolem.webp';
 
 export default {
   data() {
