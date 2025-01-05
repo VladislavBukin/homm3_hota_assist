@@ -13,7 +13,7 @@ import seaWitch          from '/src/assets/unit_image/cove/seawitch.webp';
 import sorceress         from '/src/assets/unit_image/cove/sorceress.webp';
 import nix               from '/src/assets/unit_image/cove/nix.webp';
 import nixWarrior        from '/src/assets/unit_image/cove/nixwarrior.webp';
-import seaSerpent        from '/src/assets/unit_image/cove/seaSerpent.webp';
+import seaSerpent        from '/src/assets/unit_image/cove/seaserpent.webp';
 import haspid            from '/src/assets/unit_image/cove/haspid.webp';
 
 export default {
