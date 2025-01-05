@@ -1,37 +1,38 @@
 <script>
-import gremlinImage           from "/src/assets/unit_image/tower/gremlin.jpg";
-import masterGremlinImage     from "/src/assets/unit_image/tower/master_gremlin.jpg";
-import stoneGargoyleImage     from "/src/assets/unit_image/tower/stone_gargoyle.jpg";
-import obsidianGargoyleImage  from "/src/assets/unit_image/tower/obsidian_gargoyle.jpg";
-import stoneGolemImage        from "/src/assets/unit_image/tower/stone_golem.jpg";
-import ironGolemImage         from "/src/assets/unit_image/tower/iron_golem.jpg";
-import mageImage              from "/src/assets/unit_image/tower/mage.jpg";
-import archMageImage          from "/src/assets/unit_image/tower/arch_mage.jpg";
-import genieImage             from "/src/assets/unit_image/tower/genie.jpg";
-import masterGenieImage       from "/src/assets/unit_image/tower/master_genie.jpg";
-import nagaImage              from "/src/assets/unit_image/tower/naga.jpg";
-import nagaQueenImage         from "/src/assets/unit_image/tower/naga_queen.jpg";
-import giantImage             from "/src/assets/unit_image/tower/Giant.jpg";
-import titanImage             from "/src/assets/unit_image/tower/Titan.jpg";
+import { resourceIcons } from '/src/assets/icons/resourceIcons.js';
+import gremlinImage           from "/src/assets/unit_image/tower/gremlin.webp";
+import masterGremlinImage     from "/src/assets/unit_image/tower/mastergremlin.webp";
+import stoneGargoyleImage     from "/src/assets/unit_image/tower/stonegargoyle.webp";
+import obsidianGargoyleImage  from "/src/assets/unit_image/tower/obsidiangargoyle.webp";
+import stoneGolemImage        from "/src/assets/unit_image/tower/stonegolem.webp";
+import ironGolemImage         from "/src/assets/unit_image/tower/irongolem.webp";
+import mageImage              from "/src/assets/unit_image/tower/mage.webp";
+import archMageImage          from "/src/assets/unit_image/tower/archmage.webp";
+import genieImage             from "/src/assets/unit_image/tower/genie.webp";
+import masterGenieImage       from "/src/assets/unit_image/tower/mastergenie.webp";
+import nagaImage              from "/src/assets/unit_image/tower/naga.webp";
+import nagaQueenImage         from "/src/assets/unit_image/tower/nagaqueen.webp";
+import giantImage             from "/src/assets/unit_image/tower/giant.webp";
+import titanImage             from "/src/assets/unit_image/tower/titan.webp";
 
 export default {
   data() {
     return {
       units: [
-        { name: "Гремлин",               attack: 3,  defense: 3,  damage: "1-2",   health: 4,   speed: 4,  growth: 16, value: 44,   description: "",                                                                                                                  image: gremlinImage },
-        { name: "Мастер-Гремлин",        attack: 4,  defense: 4,  damage: "1-2",   health: 4,   speed: 5,  growth: 16, value: 66,   description: "Стрелок, 8 выстрелов.",                                                                                             image: masterGremlinImage },
-        { name: "Каменная горгулья",     attack: 6,  defense: 6,  damage: "2-3",   health: 16,  speed: 6,  growth: 9,  value: 165,  description: "Летающее существо.",                                                                                                image: stoneGargoyleImage },
-        { name: "Обсидиановая горгулья", attack: 7,  defense: 7,  damage: "2-3",   health: 16,  speed: 9,  growth: 9,  value: 201,  description: "Летающее существо.",                                                                                                image: obsidianGargoyleImage },
-        { name: "Каменный голем",        attack: 7,  defense: 10, damage: "4-5",   health: 30,  speed: 3,  growth: 6,  value: 250,  description: "Голем, поглощение магии.",                                                                                          image: stoneGolemImage },
-        { name: "Железный голем",        attack: 9,  defense: 10, damage: "4-5",   health: 35,  speed: 5,  growth: 6,  value: 412,  description: "Голем, поглощение магии.",                                                                                          image: ironGolemImage },
-        { name: "Маг",                   attack: 11, defense: 8,  damage: "7-9",   health: 25,  speed: 5,  growth: 4,  value: 570,  description: "нет штрафа в ближнем бою, нет штрафа при стрельбе через крепостные стены, снижает стоимость заклинаний на 2.",      image: mageImage },
-        { name: "Архимаг",               attack: 12, defense: 9,  damage: "7-9",   health: 30,  speed: 7,  growth: 4,  value: 680,  description: "нет штрафа в ближнем бою, нет штрафа при стрельбе через крепостные стены, снижает стоимость заклинаний на 2.",      image: archMageImage },
-        { name: "Джинн",                 attack: 12, defense: 12, damage: "13-16", health: 40,  speed: 7,  growth: 3,  value: 884,  description: "Летающее существо, ненавидит инфритов.",                                                                            image: genieImage },
-        { name: "Верховный Джинн",       attack: 12, defense: 12, damage: "13-16", health: 40,  speed: 11, growth: 3,  value: 942,  description: "Летающее существо, ненавидит инфритов, способен колдовать.",                                                        image: masterGenieImage },
-        { name: "Нага",                  attack: 16, defense: 13, damage: "20",    health: 110, speed: 5,  growth: 2,  value: 2016, description: "Большое существо, безответная атака.",                                                                              image: nagaImage },
-        { name: "Королева Наг",          attack: 16, defense: 13, damage: "30",    health: 110, speed: 7,  growth: 2,  value: 2840, description: "Большое существо, безответная атака.",                                                                              image: nagaQueenImage },
-        { name: "Гигант",                attack: 19, defense: 16, damage: "40-60", health: 150, speed: 7,  growth: 1,  value: 3718, description: "Невосприимчивость к управлению разумом",                                                                            image: giantImage },
-        { name: "Титан",                 attack: 24, defense: 24, damage: "40-60", health: 300, speed: 11, growth: 1,  value: 7500, description: "Невосприимчивость к управлению разумом, стрелок 24 выстрела, нет штрафа в ближнем бою, ненавидит черных драконов.", image: titanImage },
+        { name: "Гремлин",               attack: 3,  defense: 3,  damage: "1-2",   health: 4,   speed: 4,  growth: 16, price: [{ amount: 30, icon: resourceIcons.gold },],                                        value: 44,   description: "",                                                                                                                  image: gremlinImage },
+        { name: "Мастер-Гремлин",        attack: 4,  defense: 4,  damage: "1-2",   health: 4,   speed: 5,  growth: 16, price: [{ amount: 40, icon: resourceIcons.gold },],                                        value: 66,   description: "Стрелок, 8 выстрелов.",                                                                                             image: masterGremlinImage },
+        { name: "Каменная горгулья",     attack: 6,  defense: 6,  damage: "2-3",   health: 16,  speed: 6,  growth: 9,  price: [{ amount: 130, icon: resourceIcons.gold },],                                       value: 165,  description: "Летающее существо.",                                                                                                image: stoneGargoyleImage },
+        { name: "Обсидиановая горгулья", attack: 7,  defense: 7,  damage: "2-3",   health: 16,  speed: 9,  growth: 9,  price: [{ amount: 160, icon: resourceIcons.gold },],                                       value: 201,  description: "Летающее существо.",                                                                                                image: obsidianGargoyleImage },
+        { name: "Каменный голем",        attack: 7,  defense: 10, damage: "4-5",   health: 30,  speed: 3,  growth: 6,  price: [{ amount: 150, icon: resourceIcons.gold },],                                       value: 250,  description: "Голем, поглощение магии.",                                                                                          image: stoneGolemImage },
+        { name: "Железный голем",        attack: 9,  defense: 10, damage: "4-5",   health: 35,  speed: 5,  growth: 6,  price: [{ amount: 200, icon: resourceIcons.gold },],                                       value: 412,  description: "Голем, поглощение магии.",                                                                                          image: ironGolemImage },
+        { name: "Маг",                   attack: 11, defense: 8,  damage: "7-9",   health: 25,  speed: 5,  growth: 4,  price: [{ amount: 350, icon: resourceIcons.gold },],                                       value: 570,  description: "нет штрафа в ближнем бою, нет штрафа при стрельбе через крепостные стены, снижает стоимость заклинаний на 2.",      image: mageImage },
+        { name: "Архимаг",               attack: 12, defense: 9,  damage: "7-9",   health: 30,  speed: 7,  growth: 4,  price: [{ amount: 450, icon: resourceIcons.gold },],                                       value: 680,  description: "нет штрафа в ближнем бою, нет штрафа при стрельбе через крепостные стены, снижает стоимость заклинаний на 2.",      image: archMageImage },
+        { name: "Джинн",                 attack: 12, defense: 12, damage: "13-16", health: 40,  speed: 7,  growth: 3,  price: [{ amount: 550, icon: resourceIcons.gold },],                                       value: 884,  description: "Летающее существо, ненавидит инфритов.",                                                                            image: genieImage },
+        { name: "Верховный Джинн",       attack: 12, defense: 12, damage: "13-16", health: 40,  speed: 11, growth: 3,  price: [{ amount: 600, icon: resourceIcons.gold },],                                       value: 942,  description: "Летающее существо, ненавидит инфритов, способен колдовать.",                                                        image: masterGenieImage },
+        { name: "Нага",                  attack: 16, defense: 13, damage: "20",    health: 110, speed: 5,  growth: 2,  price: [{ amount: 1100, icon: resourceIcons.gold },],                                      value: 2016, description: "Большое существо, безответная атака.",                                                                              image: nagaImage },
+        { name: "Королева Наг",          attack: 16, defense: 13, damage: "30",    health: 110, speed: 7,  growth: 2,  price: [{ amount: 1600, icon: resourceIcons.gold },],                                      value: 2840, description: "Большое существо, безответная атака.",                                                                              image: nagaQueenImage },
+        { name: "Гигант",                attack: 19, defense: 16, damage: "40-60", health: 150, speed: 7,  growth: 1,  price: [{ amount: 2000, icon: resourceIcons.gold },{amount: 1, icon: resourceIcons.gem},], value: 3718, description: "Невосприимчивость к управлению разумом",                                                                            image: giantImage },
+        { name: "Титан",                 attack: 24, defense: 24, damage: "40-60", health: 300, speed: 11, growth: 1,  price: [{ amount: 5000, icon: resourceIcons.gold },{amount: 2, icon: resourceIcons.gem},], value: 7500, description: "Невосприимчивость к управлению разумом, стрелок 24 выстрела, нет штрафа в ближнем бою, ненавидит черных драконов.", image: titanImage },
       ],
     };
   },
@@ -73,6 +74,21 @@ export default {
         <tr>
           <td>Прирост:</td>
           <td>{{ unit.growth }}</td>
+        </tr>
+        <tr>
+          <td>Стоимость:</td>
+          <td>
+            <div class="price-display">
+              <span
+                v-for="(resource, idx) in unit.price"
+                :key="idx"
+                class="resource-item"
+              >
+                <img :src="resource.icon" alt="resource" class="resource-icon" />
+                {{ resource.amount }}
+              </span>
+            </div>
+          </td>
         </tr>
         <tr>
           <td>Ai value:</td>
@@ -135,6 +151,27 @@ export default {
   color: #ffd700;
   margin-bottom: 10px;
   text-shadow: 1px 1px 2px black;
+}
+
+.price-display {
+  display: flex;
+  gap: 8px; 
+  align-items: center; 
+  justify-content: flex-end; 
+  flex-wrap: nowrap; 
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  white-space: nowrap; 
+}
+
+.resource-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
 }
 
 .unit-image-placeholder {

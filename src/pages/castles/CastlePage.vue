@@ -1,36 +1,36 @@
 <script>
 import { resourceIcons } from '/src/assets/icons/resourceIcons.js';
-import pikemen        from '/src/assets/unit_image/castle/pikeman.webp';
-import halberdier     from '/src/assets/unit_image/castle/halberdier.webp';
-import archer         from '/src/assets/unit_image/castle/archer.webp';
-import marksman       from '/src/assets/unit_image/castle/marksman.webp';
-import griffin        from '/src/assets/unit_image/castle/griffin.webp';
-import royalGriffin   from '/src/assets/unit_image/castle/royalgriffin.webp';
-import swordsman      from '/src/assets/unit_image/castle/swordsman.webp';
-import crusader       from '/src/assets/unit_image/castle/crusader.webp';
-import monk           from '/src/assets/unit_image/castle/monk.webp';
-import zealot         from '/src/assets/unit_image/castle/zealot.webp';
-import cavalier       from '/src/assets/unit_image/castle/cavalier.webp';
-import champion       from '/src/assets/unit_image/castle/champion.webp';
-import angel          from '/src/assets/unit_image/castle/angel.webp';
-import archangel      from '/src/assets/unit_image/castle/archangel.webp';
+import pikemen           from '/src/assets/unit_image/castle/pikeman.webp';
+import halberdier        from '/src/assets/unit_image/castle/halberdier.webp';
+import archer            from '/src/assets/unit_image/castle/archer.webp';
+import marksman          from '/src/assets/unit_image/castle/marksman.webp';
+import griffin           from '/src/assets/unit_image/castle/griffin.webp';
+import royalGriffin      from '/src/assets/unit_image/castle/royalgriffin.webp';
+import swordsman         from '/src/assets/unit_image/castle/swordsman.webp';
+import crusader          from '/src/assets/unit_image/castle/crusader.webp';
+import monk              from '/src/assets/unit_image/castle/monk.webp';
+import zealot            from '/src/assets/unit_image/castle/zealot.webp';
+import cavalier          from '/src/assets/unit_image/castle/cavalier.webp';
+import champion          from '/src/assets/unit_image/castle/champion.webp';
+import angel             from '/src/assets/unit_image/castle/angel.webp';
+import archangel         from '/src/assets/unit_image/castle/archangel.webp';
 
 export default {
   data() {
     return {
       units: [
-        { name: "Копейщик",           attack: 4,  defense: 5,  damage: "1-3",   health: 10,  speed: 4,  growth: 14, price: [{ amount: 60, icon: resourceIcons.gold },], value: 80,   description: "Иммунитет к кавалерийскому бонусу.",               image: pikemen },
-        { name: "Алебардщик",         attack: 6,  defense: 5,  damage: "2-3",   health: 10,  speed: 5,  growth: 14, price: [{ amount: 75, icon: resourceIcons.gold },], value: 115,  description: "Иммунитет к кавалерийскому бонусу.",               image: halberdier },
-        { name: "Лучник",             attack: 6,  defense: 3,  damage: "2-3",   health: 10,  speed: 4,  growth: 9,  price: [{ amount: 100, icon: resourceIcons.gold },], value: 126,  description: "Стрелок. 12 выстрелов.",                           image: archer },
-        { name: "Арбалетчик",         attack: 6,  defense: 3,  damage: "2-3",   health: 10,  speed: 6,  growth: 9,  price: [{ amount: 150, icon: resourceIcons.gold },], value: 184,  description: "Стрелок. 12 выстрелов. Двойной выстрел.",          image: marksman },
-        { name: "Грифон",             attack: 8,  defense: 8,  damage: "3-6",   health: 25,  speed: 6,  growth: 7,  price: [{ amount: 200, icon: resourceIcons.gold },], value: 351,  description: "Отвечает дважды.",                                 image: griffin },
-        { name: "Королевский грифон", attack: 9,  defense: 9,  damage: "3-6",   health: 25,  speed: 9,  growth: 7,  price: [{ amount: 240, icon: resourceIcons.gold },], value: 448,  description: "Отвечает на все атаки.",                           image: royalGriffin },
-        { name: "Мечник",             attack: 10, defense: 12, damage: "6-9",   health: 35,  speed: 5,  growth: 4,  price: [{ amount: 300, icon: resourceIcons.gold },], value: 445,  description: "",                                                 image: swordsman },
-        { name: "Крестоносец",        attack: 12, defense: 12, damage: "7-10",  health: 35,  speed: 6,  growth: 4,  price: [{ amount: 400, icon: resourceIcons.gold },], value: 558,  description: "Двойной удар.",                                    image: crusader },
-        { name: "Монах",              attack: 12, defense: 7,  damage: "10-12", health: 30,  speed: 5,  growth: 3,  price: [{ amount: 400, icon: resourceIcons.gold },], value: 582,  description: "Стрелок. 12 выстрелов.",                           image: monk },
-        { name: "Фанатик",            attack: 12, defense: 10, damage: "10-12", health: 30,  speed: 7,  growth: 3,  price: [{ amount: 450, icon: resourceIcons.gold },], value: 750,  description: "Стрелок. 12 выстрелов. Нет штрафа в ближнем бою.", image: zealot },
-        { name: "Кавалерист",         attack: 15, defense: 15, damage: "15-25", health: 100, speed: 7,  growth: 2,  price: [{ amount: 1000, icon: resourceIcons.gold },], value: 1946, description: "Кавалерийский бонус.",                             image: cavalier },
-        { name: "Чемпион",            attack: 16, defense: 16, damage: "20-25", health: 100, speed: 9,  growth: 2,  price: [{ amount: 1200, icon: resourceIcons.gold },], value: 2100, description: "Кавалерийский бонус.",                             image: champion },
+        { name: "Копейщик",           attack: 4,  defense: 5,  damage: "1-3",   health: 10,  speed: 4,  growth: 14, price: [{ amount: 60, icon: resourceIcons.gold },],                                         value: 80,   description: "Иммунитет к кавалерийскому бонусу.",               image: pikemen },
+        { name: "Алебардщик",         attack: 6,  defense: 5,  damage: "2-3",   health: 10,  speed: 5,  growth: 14, price: [{ amount: 75, icon: resourceIcons.gold },],                                         value: 115,  description: "Иммунитет к кавалерийскому бонусу.",               image: halberdier },
+        { name: "Лучник",             attack: 6,  defense: 3,  damage: "2-3",   health: 10,  speed: 4,  growth: 9,  price: [{ amount: 100, icon: resourceIcons.gold },],                                        value: 126,  description: "Стрелок. 12 выстрелов.",                           image: archer },
+        { name: "Арбалетчик",         attack: 6,  defense: 3,  damage: "2-3",   health: 10,  speed: 6,  growth: 9,  price: [{ amount: 150, icon: resourceIcons.gold },],                                        value: 184,  description: "Стрелок. 12 выстрелов. Двойной выстрел.",          image: marksman },
+        { name: "Грифон",             attack: 8,  defense: 8,  damage: "3-6",   health: 25,  speed: 6,  growth: 7,  price: [{ amount: 200, icon: resourceIcons.gold },],                                        value: 351,  description: "Отвечает дважды.",                                 image: griffin },
+        { name: "Королевский грифон", attack: 9,  defense: 9,  damage: "3-6",   health: 25,  speed: 9,  growth: 7,  price: [{ amount: 240, icon: resourceIcons.gold },],                                        value: 448,  description: "Отвечает на все атаки.",                           image: royalGriffin },
+        { name: "Мечник",             attack: 10, defense: 12, damage: "6-9",   health: 35,  speed: 5,  growth: 4,  price: [{ amount: 300, icon: resourceIcons.gold },],                                        value: 445,  description: "",                                                 image: swordsman },
+        { name: "Крестоносец",        attack: 12, defense: 12, damage: "7-10",  health: 35,  speed: 6,  growth: 4,  price: [{ amount: 400, icon: resourceIcons.gold },],                                        value: 558,  description: "Двойной удар.",                                    image: crusader },
+        { name: "Монах",              attack: 12, defense: 7,  damage: "10-12", health: 30,  speed: 5,  growth: 3,  price: [{ amount: 400, icon: resourceIcons.gold },],                                        value: 582,  description: "Стрелок. 12 выстрелов.",                           image: monk },
+        { name: "Фанатик",            attack: 12, defense: 10, damage: "10-12", health: 30,  speed: 7,  growth: 3,  price: [{ amount: 450, icon: resourceIcons.gold },],                                        value: 750,  description: "Стрелок. 12 выстрелов. Нет штрафа в ближнем бою.", image: zealot },
+        { name: "Кавалерист",         attack: 15, defense: 15, damage: "15-25", health: 100, speed: 7,  growth: 2,  price: [{ amount: 1000, icon: resourceIcons.gold },],                                       value: 1946, description: "Кавалерийский бонус.",                             image: cavalier },
+        { name: "Чемпион",            attack: 16, defense: 16, damage: "20-25", health: 100, speed: 9,  growth: 2,  price: [{ amount: 1200, icon: resourceIcons.gold },],                                       value: 2100, description: "Кавалерийский бонус.",                             image: champion },
         { name: "Ангел",              attack: 20, defense: 20, damage: "50",    health: 200, speed: 12, growth: 1,  price: [{ amount: 3000, icon: resourceIcons.gold }, {amount: 1, icon: resourceIcons.gem},], value: 5019, description: "Повышает мораль. Ненавидит дьяволов.",             image: angel },
         { name: "Архангел",           attack: 30, defense: 30, damage: "50",    health: 250, speed: 18, growth: 1,  price: [{ amount: 5000, icon: resourceIcons.gold }, {amount: 3, icon: resourceIcons.gem}] , value: 8776, description: "Повышает мораль. Ненавидит дьяволов. Воскрешает.", image: archangel },
       ],
@@ -90,7 +90,6 @@ export default {
             </div>
           </td>
         </tr>
-
         <tr>
           <td>Ai value:</td>
           <td>{{ unit.value }}</td>
@@ -157,17 +156,17 @@ export default {
 
 .price-display {
   display: flex;
-  gap: 8px; /* Отступ между ресурсами */
-  align-items: center; /* Выровнять элементы по центру по вертикали */
-  justify-content: flex-end; /* Выровнять весь блок стоимости по правому краю */
-  flex-wrap: nowrap; /* Запретить перенос на новую строку */
+  gap: 8px; 
+  align-items: center; 
+  justify-content: flex-end; 
+  flex-wrap: nowrap; 
 }
 
 .resource-item {
   display: flex;
   align-items: center;
-  gap: 4px; /* Отступ между иконкой и числом */
-  white-space: nowrap; /* Запретить перенос внутри одного ресурса */
+  gap: 4px; 
+  white-space: nowrap; 
 }
 
 .resource-icon {
