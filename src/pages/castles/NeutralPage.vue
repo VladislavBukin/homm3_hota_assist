@@ -1,23 +1,47 @@
 <script>
+import { resourceIcons } from '/src/assets/icons/resourceIcons.js';
+import Peasant           from '/src/assets/unit_image/neutral/peasant.webp';
+import Rogue             from '/src/assets/unit_image/neutral/rogue.webp';
+import Boar              from '/src/assets/unit_image/neutral/boar.webp';
+import Leprechaun        from '/src/assets/unit_image/neutral/Leprechaun.webp';
+import Mummy             from '/src/assets/unit_image/neutral/mummy.webp';
+import Nomad             from '/src/assets/unit_image/neutral/nomad.webp';
+import Sharpshooter      from '/src/assets/unit_image/neutral/sharpshooter.webp';
+import Satyr             from '/src/assets/unit_image/neutral/satyr.webp';
+import Troll             from '/src/assets/unit_image/neutral/troll.webp';
+import Goldgolem         from '/src/assets/unit_image/neutral/goldgolem.webp';
+import Fangarm           from '/src/assets/unit_image/neutral/fangarm.webp';
+import Diamondgolem      from '/src/assets/unit_image/neutral/diamondgolem.webp';
+import Enchanter         from '/src/assets/unit_image/neutral/enchanter.webp';
+import Faeriedragon      from '/src/assets/unit_image/neutral/faeriedragon.webp';
+import Rustdragon        from '/src/assets/unit_image/neutral/rustdragon.webp';
+import Crystaldragon     from '/src/assets/unit_image/neutral/crystaldragon.webp';
+import Azuredragon       from '/src/assets/unit_image/neutral/azuredragon.webp';
+import Steelgolem       from '/src/assets/unit_image/neutral/Steelgolem.webp';
+
 export default {
   data() {
     return {
       units: [
-        { name: "Копейщик", attack: 4, defense: 5, damage: "1-3", health: 10, speed: 4, growth: 14, value: 80, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/castle/pikemen.jpg" },
-        { name: "Алебардщик", attack: 6, defense: 5, damage: "2-3", health: 10, speed: 5, growth: 14, value: 115, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/castle/halberdier.jpg" },
-        { name: "Лучник", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 4, growth: 9, value: 126, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/castle/archer.jpg" },
-        { name: "Арбалетчик", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 6, growth: 9, value: 184, description: "Стрелок. 12 выстрелов. Двойной выстрел.", image: "/src/assets/unit_image/castle/marksman.jpg" },
-        { name: "Грифон", attack: 8, defense: 8, damage: "3-6", health: 25, speed: 6, growth: 7, value: 351, description: "Отвечает дважды.", image: "/src/assets/unit_image/castle/griffin.jpg" },
-        { name: "Королевский грифон", attack: 9, defense: 9, damage: "3-6", health: 25, speed: 9, growth: 7, value: 448, description: "Отвечает на все атаки.", image: "/src/assets/unit_image/castle/royal_griffin.jpg" },
-        { name: "Мечник", attack: 10, defense: 12, damage: "6-9", health: 35, speed: 5, growth: 4, value: 445, description: "", image: "/src/assets/unit_image/castle/swordsman.jpg" },
-        { name: "Крестоносец", attack: 12, defense: 12, damage: "7-10", health: 35, speed: 6, growth: 4, value: 558, description: "Двойной удар.", image: "/src/assets/unit_image/castle/crusader.jpg" },
-        { name: "Монах", attack: 12, defense: 7, damage: "10-12", health: 30, speed: 5, growth: 3, value: 582, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/castle/monk.jpg" },
-        { name: "Фанатик", attack: 12, defense: 10, damage: "10-12", health: 30, speed: 7, growth: 3, value: 750, description: "Стрелок. 12 выстрелов. Нет штрафа в ближнем бою.", image: "/src/assets/unit_image/castle/zealot.jpg" },
-        { name: "Кавалерист", attack: 15, defense: 15, damage: "15-25", health: 100, speed: 7, growth: 2, value: 1946, description: "Кавалерийский бонус.", image: "/src/assets/unit_image/castle/cavalier.jpg" },
-        { name: "Чемпион", attack: 16, defense: 16, damage: "20-25", health: 100, speed: 9, growth: 2, value: 2100, description: "Кавалерийский бонус.", image: "/src/assets/unit_image/castle/champion.jpg" },
-        { name: "Ангел", attack: 20, defense: 20, damage: "50", health: 200, speed: 12, growth: 1, value: 5019, description: "Повышает мораль. Ненавидит дьяволов.", image: "/src/assets/unit_image/castle/angel.jpg" },
-        { name: "Архангел", attack: 30, defense: 30, damage: "50", health: 250, speed: 18, growth: 1, value: 8776, description: "Повышает мораль. Ненавидит дьяволов. Воскрешает.", image: "/src/assets/unit_image/castle/archangel.jpg" },
-      ],
+        { name: "Крестьянин", attack: 1, defense: 1, damage: "1-1", health: 1, speed: 3, growth: 25, price: [{ amount: 10, icon: resourceIcons.gold }], value: 15, description: "", image: Peasant },
+        { name: "Вор", attack: 8, defense: 3, damage: "2-4", health: 10, speed: 6, growth: 8, price: [{ amount: 100, icon: resourceIcons.gold }], value: 135, description: "Шпион", image: Rogue },
+        { name: "Наездник на кабане", attack: 6, defense: 5, damage: "2-3", health: 15, speed: 6, growth: 8, price: [{ amount: 150, icon: resourceIcons.gold }], value: 145, description: "", image: Boar },
+        { name: "Лепрекон", attack: 8, defense: 5, damage: "3-5", health: 15, speed: 5, growth: 9, price: [{ amount: 100, icon: resourceIcons.gold }], value: 190, description: 'Колдует заклинание "Удача".', image: Leprechaun },
+        { name: "Мумия", attack: 7, defense: 7, damage: "3-5", health: 30, speed: 5, growth: 7, price: [{ amount: 300, icon: resourceIcons.gold }], value: 270, description: "Проклинает врагов", image: Mummy },
+        { name: "Кочевник", attack: 9, defense: 8, damage: "2-6", health: 30, speed: 7, growth: 7, price: [{ amount: 200, icon: resourceIcons.gold }], value: 345, description: "Ходит по пескам", image: Nomad },
+        { name: "Сатир", attack: 10, defense: 11, damage: "6-10", health: 35, speed: 7, growth: 4, price: [{ amount: 300, icon: resourceIcons.gold }], value: 518, description: 'Колдует заклинание "Радость".', image: Satyr },
+        { name: "Снайпер", attack: 12, defense: 10, damage: "8-10", health: 15, speed: 9, growth: 4, price: [{ amount: 400, icon: resourceIcons.gold }], value: 585, description: "Стрелок 32 выстрела. Нет шрафов за расстояние и препятсвия.", image: Sharpshooter },
+        { name: "Стальной голем", attack: 10, defense: 11, damage: "6-8", health: 45, speed: 6, growth: 4, price: [{ amount: 400, icon: resourceIcons.gold }], value: 597, description: "Сопротивление магии.", image: Steelgolem },
+        { name: "Золотой голем", attack: 11, defense: 12, damage: "8-10", health: 50, speed: 5, growth: 3, price: [{ amount: 500, icon: resourceIcons.gold }], value: 600, description: "Сопротивление магии.", image: Goldgolem },
+        { name: "Алмазный голем", attack: 13, defense: 12, damage: "10-24", health: 60, speed: 5, growth: 2, price: [{ amount: 750, icon: resourceIcons.gold }], value: 775, description: "Сопротивление магии.", image: Diamondgolem },
+        { name: "Фангарм", attack: 12, defense: 12, damage: "8-12", health: 50, speed: 6, growth: 3, price: [{ amount: 600, icon: resourceIcons.gold }], value: 929, description: "Иммунитет к заклинаниям разума. Всегда отвечает. Гипнотизирует врагов.", image: Fangarm },
+        { name: "Тролль", attack: 14, defense: 7, damage: "10-15", health: 40, speed: 7, growth: 3, price: [{ amount: 500, icon: resourceIcons.gold }], value: 1024, description: "Регенерация", image: Troll },
+        { name: "Чародей", attack: 17, defense: 12, damage: "14", health: 30, speed: 9, growth: 2, price: [{ amount: 750, icon: resourceIcons.gold },], value: 1210, description: "Нет штрафа в ближнем бою. Нет штрафа по припятсвию. Колдует массовые заклинания.", image: Enchanter },
+        { name: "Ржавый дракон", attack: 30, defense: 30, damage: "50", health: 750, speed: 17, growth: 1, price: [{ amount: 15000, icon: resourceIcons.gold }, { amount: 14, icon: resourceIcons.sulfur }], value: 26433, description: "Огненная атака. Ядовитая атака. Плюётся кислотой.", image: Rustdragon },
+        { name: "Сказочный дракон", attack: 20, defense: 20, damage: "20-30", health: 500, speed: 15, growth: 1, price: [{ amount: 10000, icon: resourceIcons.gold }, { amount: 8, icon: resourceIcons.gem }], value: 30501, description: "Защищён волшебным зеркалом. Колдует атакующие заклинания", image: Faeriedragon},
+        { name: "Кристальный дракон ", attack: 40, defense: 40, damage: "60-75", health: 800, speed: 16, growth: 1, price: [{ amount: 20000, icon: resourceIcons.gold }, { amount: 10, icon: resourceIcons.crystal }], value: 39338, description: "Производит кристалы. Устойчив к магии", image: Crystaldragon },
+        { name: "Лазурный дракон", attack: 50, defense: 50, damage: "70-80", health: 1000, speed: 19, growth: 1, price: [{ amount: 30000, icon: resourceIcons.gold }, { amount: 20, icon: resourceIcons.mercury }], value: 78845, description: "Ледяная атака. Иммунитет к магии. Страх. Бесстрашный", image: Azuredragon },
+      ]
     };
   },
 };
@@ -60,6 +84,21 @@ export default {
           <td>{{ unit.growth }}</td>
         </tr>
         <tr>
+          <td>Стоимость:</td>
+          <td>
+            <div class="price-display">
+              <span
+                v-for="(resource, idx) in unit.price"
+                :key="idx"
+                class="resource-item"
+              >
+                <img :src="resource.icon" alt="resource" class="resource-icon" />
+                {{ resource.amount }}
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td>Ai value:</td>
           <td>{{ unit.value }}</td>
         </tr>
@@ -75,7 +114,7 @@ export default {
 .units-flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Центрирование всей строки */
+  justify-content: center; 
   gap: 20px;
   padding: 20px;
 }
@@ -93,7 +132,7 @@ export default {
   font-family: "Terminus", serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
-  width: 100%; /* По умолчанию один блок на строку */
+  width: 100%; 
 }
 
 /* Медиа-запросы для адаптивности */
@@ -122,6 +161,28 @@ export default {
   margin-bottom: 10px;
   text-shadow: 1px 1px 2px black;
 }
+
+.price-display {
+  display: flex;
+  gap: 8px; 
+  align-items: center; 
+  justify-content: flex-end; 
+  flex-wrap: nowrap; 
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  white-space: nowrap; 
+}
+
+.resource-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
 
 .unit-image-placeholder {
   width: 150px;

@@ -1,23 +1,39 @@
 <script>
+import { resourceIcons } from '/src/assets/icons/resourceIcons.js';
+import pixie             from '/src/assets/unit_image/conflux/pixie.webp';
+import sprite            from '/src/assets/unit_image/conflux/sprite.webp';
+import airElemental      from '/src/assets/unit_image/conflux/airelemental.webp';
+import stormElemental    from '/src/assets/unit_image/conflux/stormelemental.webp';
+import waterElemental    from '/src/assets/unit_image/conflux/waterelemental.webp';
+import iceElemental      from '/src/assets/unit_image/conflux/iceelemental.webp';
+import fireElemental     from '/src/assets/unit_image/conflux/fireelemental.webp';
+import energyElemental   from '/src/assets/unit_image/conflux/energyelemental.webp';
+import earthElemental    from '/src/assets/unit_image/conflux/earthelemental.webp';
+import magmaElemental    from '/src/assets/unit_image/conflux/magmaelemental.webp';
+import psychicElemental  from '/src/assets/unit_image/conflux/psychicelemental.webp';
+import magicElemental    from '/src/assets/unit_image/conflux/magicelemental.webp';
+import firebird          from '/src/assets/unit_image/conflux/firebird.webp';
+import phoenix           from '/src/assets/unit_image/conflux/phoenix.webp';
+
 export default {
   data() {
     return {
       units: [
-        { name: "Копейщик", attack: 4, defense: 5, damage: "1-3", health: 10, speed: 4, growth: 14, value: 80, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/castle/pikemen.jpg" },
-        { name: "Алебардщик", attack: 6, defense: 5, damage: "2-3", health: 10, speed: 5, growth: 14, value: 115, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/castle/halberdier.jpg" },
-        { name: "Лучник", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 4, growth: 9, value: 126, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/castle/archer.jpg" },
-        { name: "Арбалетчик", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 6, growth: 9, value: 184, description: "Стрелок. 12 выстрелов. Двойной выстрел.", image: "/src/assets/unit_image/castle/marksman.jpg" },
-        { name: "Грифон", attack: 8, defense: 8, damage: "3-6", health: 25, speed: 6, growth: 7, value: 351, description: "Отвечает дважды.", image: "/src/assets/unit_image/castle/griffin.jpg" },
-        { name: "Королевский грифон", attack: 9, defense: 9, damage: "3-6", health: 25, speed: 9, growth: 7, value: 448, description: "Отвечает на все атаки.", image: "/src/assets/unit_image/castle/royal_griffin.jpg" },
-        { name: "Мечник", attack: 10, defense: 12, damage: "6-9", health: 35, speed: 5, growth: 4, value: 445, description: "", image: "/src/assets/unit_image/castle/swordsman.jpg" },
-        { name: "Крестоносец", attack: 12, defense: 12, damage: "7-10", health: 35, speed: 6, growth: 4, value: 558, description: "Двойной удар.", image: "/src/assets/unit_image/castle/crusader.jpg" },
-        { name: "Монах", attack: 12, defense: 7, damage: "10-12", health: 30, speed: 5, growth: 3, value: 582, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/castle/monk.jpg" },
-        { name: "Фанатик", attack: 12, defense: 10, damage: "10-12", health: 30, speed: 7, growth: 3, value: 750, description: "Стрелок. 12 выстрелов. Нет штрафа в ближнем бою.", image: "/src/assets/unit_image/castle/zealot.jpg" },
-        { name: "Кавалерист", attack: 15, defense: 15, damage: "15-25", health: 100, speed: 7, growth: 2, value: 1946, description: "Кавалерийский бонус.", image: "/src/assets/unit_image/castle/cavalier.jpg" },
-        { name: "Чемпион", attack: 16, defense: 16, damage: "20-25", health: 100, speed: 9, growth: 2, value: 2100, description: "Кавалерийский бонус.", image: "/src/assets/unit_image/castle/champion.jpg" },
-        { name: "Ангел", attack: 20, defense: 20, damage: "50", health: 200, speed: 12, growth: 1, value: 5019, description: "Повышает мораль. Ненавидит дьяволов.", image: "/src/assets/unit_image/castle/angel.jpg" },
-        { name: "Архангел", attack: 30, defense: 30, damage: "50", health: 250, speed: 18, growth: 1, value: 8776, description: "Повышает мораль. Ненавидит дьяволов. Воскрешает.", image: "/src/assets/unit_image/castle/archangel.jpg" },
-      ],
+        { name: "Пикси",                     attack: 1,  defense: 1,  damage: "1-2",   health: 3,   speed: 7,   growth: 20, price: [{ amount: 25, icon: resourceIcons.gold }],                                               value: 55,   description: "", image: pixie },
+        { name: "Фея",                       attack: 2,  defense: 2,  damage: "1-3",   health: 3,   speed: 9,   growth: 20, price: [{ amount: 30, icon: resourceIcons.gold }],                                               value: 95,   description: "Безответная атака.", image: sprite },
+        { name: "Воздушный элементаль",      attack: 9,  defense: 9,  damage: "2-8",   health: 25,  speed: 7,   growth: 6,  price: [{ amount: 250, icon: resourceIcons.gold }],                                              value: 356,  description: "Иммунитет к метиоритному дождю. Уязвимость к молниям. Противоположность земле.", image: airElemental },
+        { name: "Штормовой элементаль",      attack: 9,  defense: 9,  damage: "2-8",   health: 25,  speed: 8,   growth: 6,  price: [{ amount: 275, icon: resourceIcons.gold }],                                              value: 486,  description: "Стрелок 24 выстрела. Иммунитет к метиоритному дождю. Уязвимость к молниям. Противоположность земле. Колдует заклинание.", image: stormElemental },
+        { name: "Водный элементаль",         attack: 8,  defense: 10, damage: "3-7",   health: 30,  speed: 5,   growth: 6,  price: [{ amount: 300, icon: resourceIcons.gold }],                                              value: 315,  description: "Иммунитет к заклинаниям холода. Уязвимость к огню. Противоположность огню.", image: waterElemental },
+        { name: "Ледяной элементаль",        attack: 8,  defense: 10, damage: "3-7",   health: 30,  speed: 6,   growth: 6,  price: [{ amount: 375, icon: resourceIcons.gold }],                                              value: 380,  description: "Стрелок 24 выстрела. Иммунитет к заклинаниям холода. Уязвимость к огню. Противоположность огню. Колдует заклинание.", image: iceElemental },
+        { name: "Огненный элементаль",       attack: 10, defense: 6,  damage: "4-6",   health: 35,  speed: 6,   growth: 5,  price: [{ amount: 350, icon: resourceIcons.gold }],                                              value: 345,  description: "Иммунитет к огню. Уязвимость к холоду. противоположность воде.", image: fireElemental },
+        { name: "Энергетический элементаль", attack: 12, defense: 8,  damage: "4-6",   health: 35,  speed: 8,   growth: 5,  price: [{ amount: 400, icon: resourceIcons.gold }],                                              value: 470,  description: "Иммунитет к огню. Уязвимость к холоду. противоположность воде. Колдует заклинание.", image: energyElemental },
+        { name: "Земляной элементаль",       attack: 8,  defense: 12, damage: "5-9",   health: 40,  speed: 4,   growth: 4,  price: [{ amount: 400, icon: resourceIcons.gold }],                                              value: 330,  description: "Иммунитет к молнии. Уязвимость к метиоритному дождю. Противоположность воздуху.", image: earthElemental },
+        { name: "Магмовый элементаль",       attack: 10, defense: 12, damage: "6-10",  health: 40,  speed: 6,   growth: 4,  price: [{ amount: 500, icon: resourceIcons.gold }],                                              value: 490,  description: "Иммунитет к молнии. Уязвимость к метиоритному дождю. Противоположность воздуху. Колдует заклинание.", image: magmaElemental },
+        { name: "Психический элементаль",    attack: 15, defense: 13, damage: "10-20", health: 75,  speed: 7,   growth: 2,  price: [{ amount: 750, icon: resourceIcons.gold }],                                              value: 1669, description: "Мультиатака. Безответная атака. Магическая атака.", image: psychicElemental },
+        { name: "Магический элементаль",     attack: 15, defense: 13, damage: "15-25", health: 80,  speed: 9,   growth: 2,  price: [{ amount: 800, icon: resourceIcons.gold }],                                             value: 2012, description: "Мультиатака. Безответная атака. Магическая атака. Иммунитет к магии.", image: magicElemental },
+        { name: "Огненная птица",            attack: 18, defense: 18, damage: "30-40", health: 150, speed: 15,  growth: 1,  price: [{ amount: 1500, icon: resourceIcons.gold }],                                             value: 4336, description: "Иммунитет к огню. Огненная атака.", image: firebird },
+        { name: "Феникс",                    attack: 21, defense: 18, damage: "30-40", health: 200, speed: 21,  growth: 1,  price: [{ amount: 2000, icon: resourceIcons.gold }, { amount: 1, icon: resourceIcons.mercury }], value: 6721, description: "Иммунитет к огню. Огненная атака. Возрождается.", image: phoenix },
+      ]
     };
   },
 };
@@ -60,6 +76,21 @@ export default {
           <td>{{ unit.growth }}</td>
         </tr>
         <tr>
+          <td>Стоимость:</td>
+          <td>
+            <div class="price-display">
+              <span
+                v-for="(resource, idx) in unit.price"
+                :key="idx"
+                class="resource-item"
+              >
+                <img :src="resource.icon" alt="resource" class="resource-icon" />
+                {{ resource.amount }}
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td>Ai value:</td>
           <td>{{ unit.value }}</td>
         </tr>
@@ -75,7 +106,7 @@ export default {
 .units-flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Центрирование всей строки */
+  justify-content: center; 
   gap: 20px;
   padding: 20px;
 }
@@ -93,7 +124,7 @@ export default {
   font-family: "Terminus", serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
-  width: 100%; /* По умолчанию один блок на строку */
+  width: 100%; 
 }
 
 /* Медиа-запросы для адаптивности */
@@ -122,6 +153,28 @@ export default {
   margin-bottom: 10px;
   text-shadow: 1px 1px 2px black;
 }
+
+.price-display {
+  display: flex;
+  gap: 8px; 
+  align-items: center; 
+  justify-content: flex-end; 
+  flex-wrap: nowrap; 
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  white-space: nowrap; 
+}
+
+.resource-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
 
 .unit-image-placeholder {
   width: 150px;

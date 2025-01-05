@@ -1,23 +1,39 @@
 <script>
+import { resourceIcons }  from '/src/assets/icons/resourceIcons.js';
+import skeleton           from '/src/assets/unit_image/necropolis/skeleton.webp';
+import skeletonwarrior    from '/src/assets/unit_image/necropolis/skeletonwarrior.webp';
+import walkingdead        from '/src/assets/unit_image/necropolis/walkingdead.webp';
+import zombie             from '/src/assets/unit_image/necropolis/zombie.webp';
+import wight              from '/src/assets/unit_image/necropolis/wight.webp';
+import wraith             from '/src/assets/unit_image/necropolis/wraith.webp';
+import vampire            from '/src/assets/unit_image/necropolis/vampire.webp';
+import vampirelord        from '/src/assets/unit_image/necropolis/vampirelord.webp';
+import lich               from '/src/assets/unit_image/necropolis/lich.webp';
+import powerlich          from '/src/assets/unit_image/necropolis/powerlich.webp';
+import blackknight        from '/src/assets/unit_image/necropolis/blackknight.webp';
+import dreadknight        from '/src/assets/unit_image/necropolis/dreadknight.webp';
+import bonedragon         from '/src/assets/unit_image/necropolis/bonedragon.webp';
+import ghostdragon        from '/src/assets/unit_image/necropolis/ghostdragon.webp';
+
 export default {
   data() {
     return {
       units: [
-        { name: "Копейщик", attack: 4, defense: 5, damage: "1-3", health: 10, speed: 4, growth: 14, value: 80, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/castle/pikemen.jpg" },
-        { name: "Алебардщик", attack: 6, defense: 5, damage: "2-3", health: 10, speed: 5, growth: 14, value: 115, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/castle/halberdier.jpg" },
-        { name: "Лучник", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 4, growth: 9, value: 126, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/castle/archer.jpg" },
-        { name: "Арбалетчик", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 6, growth: 9, value: 184, description: "Стрелок. 12 выстрелов. Двойной выстрел.", image: "/src/assets/unit_image/castle/marksman.jpg" },
-        { name: "Грифон", attack: 8, defense: 8, damage: "3-6", health: 25, speed: 6, growth: 7, value: 351, description: "Отвечает дважды.", image: "/src/assets/unit_image/castle/griffin.jpg" },
-        { name: "Королевский грифон", attack: 9, defense: 9, damage: "3-6", health: 25, speed: 9, growth: 7, value: 448, description: "Отвечает на все атаки.", image: "/src/assets/unit_image/castle/royal_griffin.jpg" },
-        { name: "Мечник", attack: 10, defense: 12, damage: "6-9", health: 35, speed: 5, growth: 4, value: 445, description: "", image: "/src/assets/unit_image/castle/swordsman.jpg" },
-        { name: "Крестоносец", attack: 12, defense: 12, damage: "7-10", health: 35, speed: 6, growth: 4, value: 558, description: "Двойной удар.", image: "/src/assets/unit_image/castle/crusader.jpg" },
-        { name: "Монах", attack: 12, defense: 7, damage: "10-12", health: 30, speed: 5, growth: 3, value: 582, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/castle/monk.jpg" },
-        { name: "Фанатик", attack: 12, defense: 10, damage: "10-12", health: 30, speed: 7, growth: 3, value: 750, description: "Стрелок. 12 выстрелов. Нет штрафа в ближнем бою.", image: "/src/assets/unit_image/castle/zealot.jpg" },
-        { name: "Кавалерист", attack: 15, defense: 15, damage: "15-25", health: 100, speed: 7, growth: 2, value: 1946, description: "Кавалерийский бонус.", image: "/src/assets/unit_image/castle/cavalier.jpg" },
-        { name: "Чемпион", attack: 16, defense: 16, damage: "20-25", health: 100, speed: 9, growth: 2, value: 2100, description: "Кавалерийский бонус.", image: "/src/assets/unit_image/castle/champion.jpg" },
-        { name: "Ангел", attack: 20, defense: 20, damage: "50", health: 200, speed: 12, growth: 1, value: 5019, description: "Повышает мораль. Ненавидит дьяволов.", image: "/src/assets/unit_image/castle/angel.jpg" },
-        { name: "Архангел", attack: 30, defense: 30, damage: "50", health: 250, speed: 18, growth: 1, value: 8776, description: "Повышает мораль. Ненавидит дьяволов. Воскрешает.", image: "/src/assets/unit_image/castle/archangel.jpg" },
-      ],
+        { name: "Скелет",             attack: 5,  defense: 4,  damage: "1-3",   health: 6,   speed: 4,  growth: 12, price: [{ amount: 60, icon: resourceIcons.gold }],                                               value: 60,   description: "",                                      image: skeleton },
+        { name: "Скелет-воин",        attack: 6,  defense: 6,  damage: "1-3",   health: 6,   speed: 5,  growth: 12, price: [{ amount: 70, icon: resourceIcons.gold }],                                               value: 85,   description: "",                                      image: skeletonwarrior },
+        { name: "Ходячий мертвец",    attack: 5,  defense: 5,  damage: "2-3",   health: 15,  speed: 3,  growth: 8,  price: [{ amount: 100, icon: resourceIcons.gold }],                                              value: 98,  description:  "",                                      image: walkingdead },
+        { name: "Зомби",              attack: 5,  defense: 5,  damage: "2-3",   health: 20,  speed: 4,  growth: 8,  price: [{ amount: 125, icon: resourceIcons.gold }],                                              value: 128,  description: "Болезнь.",                              image: zombie },
+        { name: "Дух",                attack: 5,  defense: 5,  damage: "3-5",   health: 18,  speed: 5,  growth: 7,  price: [{ amount: 200, icon: resourceIcons.gold }],                                              value: 252,  description: "Регенерация.",                          image: wight },
+        { name: "Привидение",         attack: 7,  defense: 7,  damage: "3-5",   health: 18,  speed: 7,  growth: 7,  price: [{ amount: 230, icon: resourceIcons.gold }],                                              value: 315,  description: "Регенерация. Высасывает ману.",         image: wraith },
+        { name: "Вампир",             attack: 10, defense: 9,  damage: "5-8",   health: 30,  speed: 6,  growth: 4,  price: [{ amount: 360, icon: resourceIcons.gold }],                                              value: 555,  description: "Безответная атака.",                    image: vampire },
+        { name: "Вампир-лорд",        attack: 10, defense: 10, damage: "5-10",  health: 40,  speed: 9,  growth: 4,  price: [{ amount: 500, icon: resourceIcons.gold }],                                              value: 783,  description: "Безответная атака. Высасывает жизнь.",  image: vampirelord },
+        { name: "Лич",                attack: 13, defense: 10, damage: "11-13", health: 30,  speed: 6,  growth: 3,  price: [{ amount: 550, icon: resourceIcons.gold }],                                              value: 848,  description: "Стрелок 12 выстрелов. Облако смерти.",  image: lich },
+        { name: "Могучий лич",        attack: 13, defense: 10, damage: "11-15", health: 40,  speed: 7,  growth: 3,  price: [{ amount: 600, icon: resourceIcons.gold }],                                              value: 1079,  description: "Стрелок 24 выстрелов. Облако смерти.", image: powerlich },
+        { name: "Чёрный рыцарь",      attack: 16, defense: 16, damage: "15-30", health: 120, speed: 7,  growth: 2,  price: [{ amount: 1200, icon: resourceIcons.gold }],                                             value: 2087, description: "Проклятье.",                            image: blackknight },
+        { name: "Зловещий рыцарь",    attack: 18, defense: 18, damage: "15-30", health: 120, speed: 9,  growth: 2,  price: [{ amount: 1500, icon: resourceIcons.gold }],                                             value: 2382, description: "Проклятье. Смертельный удар.",          image: dreadknight },
+        { name: "Костяной дракон",    attack: 17, defense: 15, damage: "25-50", health: 150, speed: 9,  growth: 1,  price: [{ amount: 1800, icon: resourceIcons.gold }],                                             value: 3382, description: "Понижает мораль.",                      image: bonedragon },
+        { name: "Призрачный дракон",  attack: 19, defense: 17, damage: "25-50", health: 200, speed: 14, growth: 1,  price: [{ amount: 3000, icon: resourceIcons.gold }, { amount: 1, icon: resourceIcons.mercury }], value: 4696, description: "Понижает мораль. Старение",             image: ghostdragon },
+      ]
     };
   },
 };
@@ -60,6 +76,21 @@ export default {
           <td>{{ unit.growth }}</td>
         </tr>
         <tr>
+          <td>Стоимость:</td>
+          <td>
+            <div class="price-display">
+              <span
+                v-for="(resource, idx) in unit.price"
+                :key="idx"
+                class="resource-item"
+              >
+                <img :src="resource.icon" alt="resource" class="resource-icon" />
+                {{ resource.amount }}
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td>Ai value:</td>
           <td>{{ unit.value }}</td>
         </tr>
@@ -75,7 +106,7 @@ export default {
 .units-flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Центрирование всей строки */
+  justify-content: center; 
   gap: 20px;
   padding: 20px;
 }
@@ -93,7 +124,7 @@ export default {
   font-family: "Terminus", serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
-  width: 100%; /* По умолчанию один блок на строку */
+  width: 100%; 
 }
 
 /* Медиа-запросы для адаптивности */
@@ -123,6 +154,28 @@ export default {
   text-shadow: 1px 1px 2px black;
 }
 
+.price-display {
+  display: flex;
+  gap: 8px; 
+  align-items: center; 
+  justify-content: flex-end; 
+  flex-wrap: nowrap; 
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  white-space: nowrap; 
+}
+
+.resource-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+
 .unit-image-placeholder {
   width: 150px;
   height: 150px;
@@ -141,6 +194,7 @@ export default {
   height: 150px;
   object-fit: fill;
 }
+
 .unit-stats {
   width: 100%;
   margin-bottom: 10px;

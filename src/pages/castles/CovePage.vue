@@ -1,23 +1,41 @@
 <script>
+import { resourceIcons } from '/src/assets/icons/resourceIcons.js';
+import nymph             from '/src/assets/unit_image/cove/nymph.webp';
+import oceanid           from '/src/assets/unit_image/cove/oceanid.webp';
+import crewMate          from '/src/assets/unit_image/cove/crewmate.webp';
+import seaman            from '/src/assets/unit_image/cove/seaman.webp';
+import pirate            from '/src/assets/unit_image/cove/pirate.webp';
+import corsair           from '/src/assets/unit_image/cove/corsair.webp';
+import seaDog            from '/src/assets/unit_image/cove/seadog.webp';
+import stormbird         from '/src/assets/unit_image/cove/stormbird.webp';
+import ayssid            from '/src/assets/unit_image/cove/ayssid.webp';
+import seaWitch          from '/src/assets/unit_image/cove/seawitch.webp';
+import sorceress         from '/src/assets/unit_image/cove/sorceress.webp';
+import nix               from '/src/assets/unit_image/cove/nix.webp';
+import nixWarrior        from '/src/assets/unit_image/cove/nixWarrior.webp';
+import seaSerpent        from '/src/assets/unit_image/cove/seaSerpent.webp';
+import haspid            from '/src/assets/unit_image/cove/haspid.webp';
+
 export default {
   data() {
     return {
       units: [
-        { name: "Копейщик", attack: 4, defense: 5, damage: "1-3", health: 10, speed: 4, growth: 14, value: 80, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/castle/pikemen.jpg" },
-        { name: "Алебардщик", attack: 6, defense: 5, damage: "2-3", health: 10, speed: 5, growth: 14, value: 115, description: "Иммунитет к кавалерийскому бонусу.", image: "/src/assets/unit_image/castle/halberdier.jpg" },
-        { name: "Лучник", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 4, growth: 9, value: 126, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/castle/archer.jpg" },
-        { name: "Арбалетчик", attack: 6, defense: 3, damage: "2-3", health: 10, speed: 6, growth: 9, value: 184, description: "Стрелок. 12 выстрелов. Двойной выстрел.", image: "/src/assets/unit_image/castle/marksman.jpg" },
-        { name: "Грифон", attack: 8, defense: 8, damage: "3-6", health: 25, speed: 6, growth: 7, value: 351, description: "Отвечает дважды.", image: "/src/assets/unit_image/castle/griffin.jpg" },
-        { name: "Королевский грифон", attack: 9, defense: 9, damage: "3-6", health: 25, speed: 9, growth: 7, value: 448, description: "Отвечает на все атаки.", image: "/src/assets/unit_image/castle/royal_griffin.jpg" },
-        { name: "Мечник", attack: 10, defense: 12, damage: "6-9", health: 35, speed: 5, growth: 4, value: 445, description: "", image: "/src/assets/unit_image/castle/swordsman.jpg" },
-        { name: "Крестоносец", attack: 12, defense: 12, damage: "7-10", health: 35, speed: 6, growth: 4, value: 558, description: "Двойной удар.", image: "/src/assets/unit_image/castle/crusader.jpg" },
-        { name: "Монах", attack: 12, defense: 7, damage: "10-12", health: 30, speed: 5, growth: 3, value: 582, description: "Стрелок. 12 выстрелов.", image: "/src/assets/unit_image/castle/monk.jpg" },
-        { name: "Фанатик", attack: 12, defense: 10, damage: "10-12", health: 30, speed: 7, growth: 3, value: 750, description: "Стрелок. 12 выстрелов. Нет штрафа в ближнем бою.", image: "/src/assets/unit_image/castle/zealot.jpg" },
-        { name: "Кавалерист", attack: 15, defense: 15, damage: "15-25", health: 100, speed: 7, growth: 2, value: 1946, description: "Кавалерийский бонус.", image: "/src/assets/unit_image/castle/cavalier.jpg" },
-        { name: "Чемпион", attack: 16, defense: 16, damage: "20-25", health: 100, speed: 9, growth: 2, value: 2100, description: "Кавалерийский бонус.", image: "/src/assets/unit_image/castle/champion.jpg" },
-        { name: "Ангел", attack: 20, defense: 20, damage: "50", health: 200, speed: 12, growth: 1, value: 5019, description: "Повышает мораль. Ненавидит дьяволов.", image: "/src/assets/unit_image/castle/angel.jpg" },
-        { name: "Архангел", attack: 30, defense: 30, damage: "50", health: 250, speed: 18, growth: 1, value: 8776, description: "Повышает мораль. Ненавидит дьяволов. Воскрешает.", image: "/src/assets/unit_image/castle/archangel.jpg" },
-      ],
+        { name: "Нимфа", attack: 5, defense: 2, damage: "1-2", health: 4, speed: 6, growth: 16, price: [{ amount: 35, icon: resourceIcons.gold }], value: 57, description: "Иммунитет к заклинаниям холода.", image: nymph },
+        { name: "Океанида", attack: 6, defense: 2, damage: "1-3", health: 4, speed: 8, growth: 16, price: [{ amount: 45, icon: resourceIcons.gold }], value: 75, description: "Иммунитет к заклинаниям холода.", image: oceanid },
+        { name: "Матрос", attack: 7, defense: 4, damage: "2-4", health: 15, speed: 5, growth: 9, price: [{ amount: 110, icon: resourceIcons.gold }], value: 155, description: "", image: crewMate },
+        { name: "Моряк", attack: 8, defense: 6, damage: "3-4", health: 15, speed: 6, growth: 9, price: [{ amount: 140, icon: resourceIcons.gold }], value: 174, description: "", image: seaman },
+        { name: "Пират", attack: 8, defense: 6, damage: "3-7", health: 15, speed: 6, growth: 7, price: [{ amount: 225, icon: resourceIcons.gold }], value: 312, description: "Стрелок 4 выстрела. нет штрафа в ближнем бою.", image: pirate },
+        { name: "Корсар", attack: 10, defense: 8, damage: "3-7", health: 15, speed: 7, growth: 7, price: [{ amount: 275, icon: resourceIcons.gold }], value: 407, description: "Стрелок 4 выстрела. Нет штрафа в ближнем бою. Безответная атака.", image: corsair },
+        { name: "Морской волк", attack: 12, defense: 11, damage: "3-7", health: 15, speed: 8, growth: 7, price: [{ amount: 375, icon: resourceIcons.gold }], value: 602, description: "Стрелок 12 выстрелов. Нет штрафа в ближнем бою. Безответная атака. Точный выстрел.", image: seaDog },
+        { name: "Штормовая птица", attack: 10, defense: 8, damage: "6-9", health: 30, speed: 9, growth: 4, price: [{ amount: 275, icon: resourceIcons.gold }], value: 502, description: "Летающий.", image: stormbird },
+        { name: "Айсид", attack: 11, defense: 8, damage: "6-10", health: 30, speed: 11, growth: 4, price: [{ amount: 325, icon: resourceIcons.gold }], value: 645, description: "Жестокость.", image: ayssid },
+        { name: "Морская ведьма", attack: 12, defense: 7, damage: "10-14", health: 35, speed: 6, growth: 3, price: [{ amount: 515, icon: resourceIcons.gold }], value: 790, description: "Стрелок 12 выстрелов. Колдует после атаки.", image: seaWitch },
+        { name: "Колдунья", attack: 12, defense: 9, damage: "10-16", health: 35, speed: 7, growth: 3, price: [{ amount: 565, icon: resourceIcons.gold }], value: 852, description: "Стрелок 12 выстрелов. Колдует после атаки.", image: sorceress },
+        { name: "Никс", attack: 13, defense: 16, damage: "18-22", health: 80, speed: 6, growth: 2, price: [{ amount: 1000, icon: resourceIcons.gold }], value: 1415, description: "Стойкий", image: nix },
+        { name: "Воин Никс", attack: 14, defense: 17, damage: "18-22", health: 90, speed: 7, growth: 2, price: [{ amount: 1300, icon: resourceIcons.gold }], value: 2116, description: "Очень стойкий", image: nixWarrior },
+        { name: "Морской змей", attack: 22, defense: 16, damage: "30-55", health: 180, speed: 9, growth: 1, price: [{ amount: 2200, icon: resourceIcons.gold }], value: 3953, description: "Яд.", image: seaSerpent },
+        { name: "Хаспид", attack: 29, defense: 20, damage: "30-55", health: 300, speed: 12, growth: 1, price: [{ amount: 4000, icon: resourceIcons.gold }, { amount: 2, icon: resourceIcons.sulfur }], value: 7220, description: "Яд. Месть.", image: haspid },
+      ]
     };
   },
 };
@@ -60,6 +78,21 @@ export default {
           <td>{{ unit.growth }}</td>
         </tr>
         <tr>
+          <td>Стоимость:</td>
+          <td>
+            <div class="price-display">
+              <span
+                v-for="(resource, idx) in unit.price"
+                :key="idx"
+                class="resource-item"
+              >
+                <img :src="resource.icon" alt="resource" class="resource-icon" />
+                {{ resource.amount }}
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td>Ai value:</td>
           <td>{{ unit.value }}</td>
         </tr>
@@ -75,7 +108,7 @@ export default {
 .units-flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Центрирование всей строки */
+  justify-content: center; 
   gap: 20px;
   padding: 20px;
 }
@@ -93,7 +126,7 @@ export default {
   font-family: "Terminus", serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
-  width: 100%; /* По умолчанию один блок на строку */
+  width: 100%; 
 }
 
 /* Медиа-запросы для адаптивности */
@@ -122,6 +155,28 @@ export default {
   margin-bottom: 10px;
   text-shadow: 1px 1px 2px black;
 }
+
+.price-display {
+  display: flex;
+  gap: 8px; 
+  align-items: center; 
+  justify-content: flex-end; 
+  flex-wrap: nowrap; 
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  white-space: nowrap; 
+}
+
+.resource-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
 
 .unit-image-placeholder {
   width: 150px;
